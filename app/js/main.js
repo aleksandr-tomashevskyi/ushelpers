@@ -3,29 +3,29 @@ var mixer = mixitup('.portfolio__gallery');
 
 //    About list logic start
 
-const aboutList = document.querySelector('.about__list')
-let clickedAboutItem;
-let aboutContainerForChange;
-let aboutTextForChange;
-let aboutTitleContainerForChange;
+// const aboutList = document.querySelector('.about__list')
+// let clickedAboutItem;
+// let aboutContainerForChange;
+// let aboutTextForChange;
+// let aboutTitleContainerForChange;
 
-function checkClickAbout(event){
-   if(event.target.closest('.about__list-item-title-container')){
-      aboutTitleContainerForChange = event.target.closest('.about__list-item-title-container');
-      aboutContainerForChange = event.target.closest('.about__list-item-title-container').nextSibling.nextSibling;
-      aboutTextForChange = aboutContainerForChange.firstChild.nextSibling;
-      aboutOpenNestedList();
-   }
-}
+// function checkClickAbout(event){
+//    if(event.target.closest('.about__list-item-title-container')){
+//       aboutTitleContainerForChange = event.target.closest('.about__list-item-title-container');
+//       aboutContainerForChange = event.target.closest('.about__list-item-title-container').nextSibling.nextSibling;
+//       aboutTextForChange = aboutContainerForChange.firstChild.nextSibling;
+//       aboutOpenNestedList();
+//    }
+// }
 
-function aboutOpenNestedList(){
-   aboutContainerForChange.classList.toggle('about__list-item-text-container--active');
-   aboutTitleContainerForChange.classList.toggle('about__list-item-title-container--active');
-   setTimeout(()=> aboutTextForChange.classList.toggle('about__list-item-text--active'), 10);
-}
-if(aboutList){
-aboutList.addEventListener("click", checkClickAbout);
-}
+// function aboutOpenNestedList(){
+//    aboutContainerForChange.classList.toggle('about__list-item-text-container--active');
+//    aboutTitleContainerForChange.classList.toggle('about__list-item-title-container--active');
+//    setTimeout(()=> aboutTextForChange.classList.toggle('about__list-item-text--active'), 10);
+// }
+// if(aboutList){
+// aboutList.addEventListener("click", checkClickAbout);
+// }
 //    About list logic end
 
 //    Porfolio logic start
@@ -106,42 +106,42 @@ portfolioShowMoreButton.addEventListener("click", portfolioShowMoreButtonFunc);
 
 //    Header color change while scroll start
 
-let lastKnownScrollPosition = window.scrollY;
-const headerScroller = document.querySelectorAll(".header-scroller");
-let headerScrollerPrototype;
-let scrollerMemoryFlag = false; //for use in burger menu function
+// let lastKnownScrollPosition = window.scrollY;
+// const headerScroller = document.querySelectorAll(".header-scroller");
+// let headerScrollerPrototype;
+// let scrollerMemoryFlag = false; //for use in burger menu function
 
-function headerScroll(){
-   lastKnownScrollPosition = window.scrollY;
-   if(lastKnownScrollPosition > 50){
-      headerScroller.forEach((element)=> {
-         headerScrollerPrototype = element.classList[0];
-         element.classList.add(`${headerScrollerPrototype}--whitebg`);
-         scrollerMemoryFlag = true;
-      })
-   } else {
-      headerScroller.forEach((element)=> {
-         headerScrollerPrototype = element.classList[0];
-         element.classList.remove(`${headerScrollerPrototype}--whitebg`);
-         scrollerMemoryFlag = false;
-      })
-   }
-};
-function headerScrollWhiteLoad(){
-   headerScroller.forEach((element)=> {
-      headerScrollerPrototype = element.classList[0];
-      element.classList.add(`${headerScrollerPrototype}--whitebg`);
-      scrollerMemoryFlag = true;
-   })
-}
+// function headerScroll(){
+//    lastKnownScrollPosition = window.scrollY;
+//    if(lastKnownScrollPosition > 50){
+//       headerScroller.forEach((element)=> {
+//          headerScrollerPrototype = element.classList[0];
+//          element.classList.add(`${headerScrollerPrototype}--whitebg`);
+//          scrollerMemoryFlag = true;
+//       })
+//    } else {
+//       headerScroller.forEach((element)=> {
+//          headerScrollerPrototype = element.classList[0];
+//          element.classList.remove(`${headerScrollerPrototype}--whitebg`);
+//          scrollerMemoryFlag = false;
+//       })
+//    }
+// };
+// function headerScrollWhiteLoad(){
+//    headerScroller.forEach((element)=> {
+//       headerScrollerPrototype = element.classList[0];
+//       element.classList.add(`${headerScrollerPrototype}--whitebg`);
+//       scrollerMemoryFlag = true;
+//    })
+// }
 
-// checking the page we are loaded in
-if(document.title != "Ladesign portfolio"){
-headerScroll(); //launching this function one time on page load
-document.addEventListener("scroll", headerScroll)
-} else{
-   headerScrollWhiteLoad();
-}
+// // checking the page we are loaded in
+// if(document.title != "Ladesign portfolio"){
+// headerScroll(); //launching this function one time on page load
+// document.addEventListener("scroll", headerScroll)
+// } else{
+//    headerScrollWhiteLoad();
+// }
 
 //    Header color change while scroll end
 
@@ -215,21 +215,21 @@ popupFormButton.addEventListener("click", showAccepted);
 const menuIconBlock = document.querySelector(".header__menu-icon");
 let burgerMenuMemoryFlag = false;
 
-function whiteMenuElements(){
-   if(scrollerMemoryFlag){ //making header elements white if not already
-      if(burgerMenuMemoryFlag){
-         headerScroller.forEach((element)=> {
-            headerScrollerPrototype = element.classList[0];
-            element.classList.remove(`${headerScrollerPrototype}--whitebg`);
-         })
-      } else{
-         headerScroller.forEach((element)=> {
-            headerScrollerPrototype = element.classList[0];
-            element.classList.add(`${headerScrollerPrototype}--whitebg`);
-         })
-      }
-   }
-}
+// function whiteMenuElements(){
+//    if(scrollerMemoryFlag){ //making header elements white if not already
+//       if(burgerMenuMemoryFlag){
+//          headerScroller.forEach((element)=> {
+//             headerScrollerPrototype = element.classList[0];
+//             element.classList.remove(`${headerScrollerPrototype}--whitebg`);
+//          })
+//       } else{
+//          headerScroller.forEach((element)=> {
+//             headerScrollerPrototype = element.classList[0];
+//             element.classList.add(`${headerScrollerPrototype}--whitebg`);
+//          })
+//       }
+//    }
+// }
 
 function showHideBurgerMenu(event){
    document.querySelector(".navigation__body").classList.toggle("navigation__body--active");
@@ -238,7 +238,6 @@ function showHideBurgerMenu(event){
    } else{
       burgerMenuMemoryFlag = false;
    }
-   whiteMenuElements();
    hideShowScroll();
 }
 
