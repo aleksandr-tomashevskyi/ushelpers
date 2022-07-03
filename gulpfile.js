@@ -17,14 +17,14 @@ function buildStyles() {
     .pipe(gulp.dest('app/css/'))
     .pipe(browserSync.reload({stream: true}));
 };
-// function buildJs(){
-//   return gulp.src([
-//     "./node_modules/mixitup/dist/mixitup.min.js"
-//   ])
-//   .pipe(rename("libs.min.js"))
-//   .pipe(gulp.dest("app/js"))
-//   .pipe(browserSync.reload({stream: true}));
-// };
+function buildJs(){
+  return gulp.src([
+    "./node_modules/slick-carousel/slick/slick.min.js"
+  ])
+  .pipe(rename("libs.min.js"))
+  .pipe(gulp.dest("app/js"))
+  .pipe(browserSync.reload({stream: true}));
+};
 function serverStart(){
   browserSync.init({
     server: {
@@ -37,10 +37,10 @@ function browserReload(){
   browserSync.reload();
 }
 exports.buildStyles = buildStyles;
-// exports.buildJs = buildJs;
+exports.buildJs = buildJs;
 function watch() {
   gulp.watch('app/scss/**/*.scss', buildStyles);
   gulp.watch('app/*.html').on('change', browserReload);
   gulp.watch('app/js/*js').on('change', browserReload);
 };
-exports.default = parallel(serverStart, watch);
+exports.default = parallel(serverStart, buildJs, watch);
