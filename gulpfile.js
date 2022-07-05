@@ -6,6 +6,8 @@ let browserSync = require('browser-sync').create();
 const { parallel } = require('gulp');
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 
 
 
@@ -19,9 +21,11 @@ function buildStyles() {
 };
 function buildJs(){
   return gulp.src([
-    "./node_modules/slick-carousel/slick/slick.min.js"
+    "./node_modules/slick-carousel/slick/slick.min.js",
+    "./node_modules/animejs/lib/anime.min.js"
   ])
-  .pipe(rename("libs.min.js"))
+  .pipe(concat("libs.min.js"))
+  .pipe(uglify())
   .pipe(gulp.dest("app/js"))
   .pipe(browserSync.reload({stream: true}));
 };
