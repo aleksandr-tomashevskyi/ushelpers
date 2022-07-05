@@ -4,18 +4,20 @@
 :root {
    --color-primary-accent: #F26513;
    --color-secondary-accent: #3C72CC;
+   --site-background-color: #F7F4E7;
    --buttons-color: #393246;
    --decorative-line: #878787;
    --lines: #D5D5D5;
  }
-$accent: #777777;
-$buttons-color: #393246;
-$decorative-line: #878787;
-$lines: #D5D5D5;
+
+//screens
+$tablet-vertical: 768px;
+$tablet-horizontal: 1024px;
+$pc-small: 1366px;
+$pc-large: 1640px;
 
 
-
-// *** Mixins ***
+// *** Mixins
 
 @mixin menu-items-font{
    font-family: 'Montserrat', sans-serif;
@@ -102,13 +104,13 @@ $lines: #D5D5D5;
 @mixin buttons-effects--white{
    transition-duration: 0.3s;
    &:hover{
-      background-color: $buttons-color;
-      border: solid $buttons-color 1px;
+      background-color: var(--buttons-color);
+      border: solid var(--buttons-color) 1px;
       color: #FFFFFF;
    }
    &:active{
       background-color: #4A415A;
-      border: solid $buttons-color 1px;
+      border: solid var(--buttons-color) 1px;
       color: #FFFFFF;
    }
 }
@@ -116,18 +118,18 @@ $lines: #D5D5D5;
    transition-duration: 0.3s;
    &:hover{
       background-color: #4A415A;
-      border: solid $buttons-color 1px;
+      border: solid var(--buttons-color) 1px;
       color: #FFFFFF;
    }
    &:active{
       background-color: #63557C;
-      border: solid $buttons-color 1px;
+      border: solid var(--buttons-color) 1px;
       color: #FFFFFF;
    }
 }
 @mixin menu-items-hover{
    &:hover{
-      color: $buttons-color;
-      border-bottom: solid $buttons-color 1px;
+      color: var(--buttons-color);
+      border-bottom: solid var(--buttons-color) 1px;
    }
 }
