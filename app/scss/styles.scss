@@ -157,13 +157,50 @@ body{
    }
    &__inner-list-trigger{
       position: relative;
+      &::after{
+         position: absolute;
+         top: 0px;
+         right: -13px;
+         display: inline-block;
+         content: "";
+         border: solid var(--color-secondary-accent);
+         border-width: 0 2px 2px 0;
+         padding: 4px;
+         transform: rotate(45deg);
+         -webkit-transform: rotate(45deg);
+         transition: all 0.3s ease;
+         cursor: pointer;
+         @media(min-width: $tablet-vertical){
+            border-width: 0 3px 3px 0;
+            padding: 7px;
+            top: -10px;
+         }
+         @media(min-width: $tablet-horizontal){
+            border-width: 0 1px 1px 0;
+            padding: 3px;
+            top: 17px;
+         }
+      }
+      @media (hover: hover) and (min-width: $tablet-horizontal){
+         &:hover .navigation__inner-list{
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+         }
+         &:hover::after{
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+         }
+      }
       @media(min-width: $tablet-horizontal){
          padding: 15px 0;
+         margin-right: 30px;
       }
-      &:hover .navigation__inner-list{
-         opacity: 1;
-         visibility: visible;
-         pointer-events: all;
+   }
+   &__inner-list-trigger--active{
+      &::after{
+         transform: rotate(-135deg);
+         -webkit-transform: rotate(-135deg);
       }
    }
    &__inner-list{
@@ -172,7 +209,7 @@ body{
       margin: 40px 0 0 20px;
       background-color: rgba(51, 51, 51, 0.4);
       padding: 30px 10px 20px 20px;
-      border-radius: 12px;
+      border-radius: 1rem;
       @media(min-width: 450px){
          margin: 40px 0 0 30px;
       }
@@ -187,13 +224,15 @@ body{
          top: 10%;
          left: -40px;
          color: #FFFFFF;
-         border-radius: 12px;
          background-color: var(--color-secondary-accent);
          padding: 15px 15px 15px 15px;
       }
    }
    &__inner-list--active{
       display: block;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
    }
    &__inner-list-item{
       margin: 20px 0 0 0;
