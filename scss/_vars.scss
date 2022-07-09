@@ -28,109 +28,133 @@ $pc-large: 1640px;
 @mixin title-first-font{
    font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      font-size: 24px;
-      line-height: 36px;
+      font-size: 32px;
+      line-height: 1em;
       text-transform: uppercase;
       @media(min-width: 768px){
-         font-size: 36px;
-         line-height: 48px;
+         font-size: 64px;
+         line-height: 1em;
       }
 }
 @mixin title-second-font{
    font-family: 'Montserrat', sans-serif;
    font-weight: 700;
-   font-size: 30px;
-   line-height: 36px;
+   font-size: 20px;
+   line-height: 1.36em;
    @media(min-width: 768px){
       font-size: 40px;
-      line-height: 54px;
+      line-height: 1.36em;
    }
 }
 @mixin title-third-font{
    font-family: 'Montserrat', sans-serif;
    font-weight: 700;
-   font-size: 20px;
-   line-height: 25px;
+   font-size: 12px;
+   line-height: 1.36em;
    @media(min-width: 768px){
-      font-size: 30px;
-      line-height: 40px;
+      font-size: 24px;
+      line-height: 1.36em;
    }
 }
-@mixin title-fourth-font{
-   font-family: 'Montserrat', sans-serif;
-   font-weight: 700;
-   font-size: 21px;
-   line-height: 28px;
-}
-@mixin title-fifth-font{
-   font-family: 'Montserrat', sans-serif;
-   font-weight: 700;
-   font-size: 16px;
-   line-height: 22px;
-}
-@mixin sub-title-font{
-   font-family: 'Montserrat', sans-serif;
-   font-weight: 700;
-   font-size: 16px;
-   line-height: 21px;
-}
-@mixin descriptions-font{
+// @mixin title-fourth-font{
+//    font-family: 'Montserrat', sans-serif;
+//    font-weight: 700;
+//    font-size: 21px;
+//    line-height: 28px;
+// }
+// @mixin title-fifth-font{
+//    font-family: 'Montserrat', sans-serif;
+//    font-weight: 700;
+//    font-size: 16px;
+//    line-height: 22px;
+// }
+// @mixin sub-title-font{
+//    font-family: 'Montserrat', sans-serif;
+//    font-weight: 700;
+//    font-size: 16px;
+//    line-height: 21px;
+// }
+@mixin p-first-font{
    font-family: 'Montserrat', sans-serif;
    font-weight: 400;
-   font-size: 18px;
-   line-height: 24px;
+   font-size: 24px;
+   line-height: 1.36em;
    @media(min-width: 768px){
       font-size: 21px;
-      line-height: 28px;
    }
 }
-@mixin plain-text-font{
+@mixin p-second-font{
    font-family: 'Montserrat', sans-serif;
    font-weight: 400;
-   font-size: 16px;
-   line-height: 21px;
+   font-size: 20px;
+   line-height: 1.36em;
+   @media(min-width: 768px){
+      font-size: 16px;
+   }
+}
+@mixin p-third-font{
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.36em;
+   @media(min-width: 768px){
+      font-size: 12px;
+   }
 }
 @mixin buttons-font{
    font-family: 'Montserrat', sans-serif;
    font-weight: 700;
    font-size: 16px;
-   line-height: 21px;
-   border-radius: 1rem;
+   line-height: 27px;
+}
+@mixin links-font{
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   font-size: 24px;
+   line-height: 1.36em;
+   text-decoration: underline;
+   &:hover{
+   font-weight: 700;
+   text-decoration: none;
+   }
+   @media(min-width: $tablet-vertical){
+   font-size: 20px;
+   }
 }
 @mixin background-image-settings{
    background-position: center bottom;
    background-size: cover;
    background-origin: padding-box;
 }
-@mixin buttons-effects--white{
+@mixin buttons-style--blue{
+   background-color: var(--color-secondary-accent);
    transition-duration: 0.3s;
+   border-radius: 1rem;
+   color: #FFFFFF;
+   border: solid var(--color-secondary-accent) 2px;
    &:hover{
-      background-color: var(--buttons-color);
-      border: solid var(--buttons-color) 1px;
-      color: #FFFFFF;
+      background-color: transparent;
+      color: var(--color-secondary-accent);
    }
-   &:active{
-      background-color: #4A415A;
-      border: solid var(--buttons-color) 1px;
-      color: #FFFFFF;
-   }
+   // &:active{
+   //    background-color: #4A415A;
+   //    border: solid var(--buttons-color) 1px;
+   //    color: #FFFFFF;
+   // }
 }
-@mixin buttons-effects--dark{
+@mixin buttons-style--orange{
+   background-color: var(--color-primary-accent);
    transition-duration: 0.3s;
+   border-radius: 1rem;
+   color: #FFFFFF;
+   border: solid var(--color-primary-accent) 2px;
    &:hover{
-      background-color: #4A415A;
-      border: solid var(--buttons-color) 1px;
-      color: #FFFFFF;
+      background-color: transparent;
+      color: var(--color-primary-accent);
    }
-   &:active{
-      background-color: #63557C;
-      border: solid var(--buttons-color) 1px;
-      color: #FFFFFF;
-   }
-}
-@mixin menu-items-hover{
-   &:hover{
-      color: var(--buttons-color);
-      border-bottom: solid var(--buttons-color) 1px;
-   }
+   // &:active{
+   //    background-color: #63557C;
+   //    border: solid var(--buttons-color) 1px;
+   //    color: #FFFFFF;
+   // }
 }

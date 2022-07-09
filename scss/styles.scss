@@ -268,7 +268,7 @@ body{
       cursor: pointer;
       &:hover{
          @media(min-width: $tablet-horizontal){
-            border-bottom: solid #FFFFFF 1px;
+            border-bottom: solid var(--color-secondary-accent) 1px;
          }
       }
       @media(min-width: 450px){
@@ -276,6 +276,13 @@ body{
       }
       @media(min-width: $tablet-horizontal){
          @include menu-items-font;
+      }
+   }
+   &__link--inner{
+      &:hover{
+         @media(min-width: $tablet-horizontal){
+            border-bottom: solid #FFFFFF 1px;
+         }
       }
    }
    &__body{
@@ -303,7 +310,7 @@ body{
 .main{
    flex: 1 0 auto;
 }
-.about{
+.main-block{
    margin-top: 70px;
    @media(min-width: $tablet-vertical){
       margin-top: 150px;
@@ -346,7 +353,7 @@ body{
       }
    }
    &__description{
-      @include descriptions-font;
+      @include p-first-font;
       color: var(--color-secondary-accent);
       margin: 0 auto 39px auto;
       display: block;
@@ -361,7 +368,7 @@ body{
       }
    }
    &__sub-title{
-      @include sub-title-font;
+      @include buttons-font;
       color: var(--color-secondary-accent);
       margin-bottom: 39px;
       text-align: center;
@@ -376,8 +383,12 @@ body{
       padding: 25px;
       margin: 0 auto 39px;
       // height: 77px;
-      background-color: var(--color-primary-accent);
-      color: #FFFFFF;
+   }
+   &__button--orange{
+      @include buttons-style--orange;
+   }
+   &__button--blue{
+      @include buttons-style--blue;
    }
    &__image-container{
       margin: 0 auto;
@@ -415,8 +426,7 @@ body{
       margin-top: 35px;
       width: 100%;
       padding: 20px 10px;
-      background-color: var(--color-primary-accent);
-      color: #FFFFFF;
+      color: var(--color-primary-accent);
       text-align: center;
       @media(min-width: $tablet-vertical){
          padding: 30px 25px;
@@ -426,58 +436,71 @@ body{
       }
    }
    &__text-block-plain-text{
-      @include plain-text-font;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 1.36em;
       margin-bottom: 15px;
-      &:nth-child(2){
-         margin-bottom: 34px;
-      }
-      &:last-child{
-         margin: 0;
+      @media(min-width: $tablet-vertical){
+         font-size: 48px;
+         line-height: 1.36em;
       }
    }
    &__text-block-sub-title{
-      @include sub-title-font;
-      margin-bottom: 15px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 1em;
+      @media(min-width: $tablet-vertical){
+         font-size: 48px;
+         line-height: 1.36em;
+      }
    }
    &__text-block-link{
       text-decoration: underline;
    }
-   &__third-title{
-      @include title-third-font;
+}
+
+.fields{
+   &__title{
+      @include title-second-font;
       color: var(--color-secondary-accent);
       margin: 50px auto 20px;
       text-align: center;
    }
-   &__discover-more-link{
-      display: block;
-      @include plain-text-font;
+   &__description{
+      @include p-first-font;
+      color: var(--color-secondary-accent);
+      margin: 50px auto 20px;
+      text-align: center;
+   }
+   &__discover-more-link-text{
+      @include links-font;
       color: var(--color-secondary-accent);
       text-align: center;
-      text-decoration: underline;
    }
-}
-
-.service-cards{
-   display: grid;
-   row-gap: 40px;
-   margin-bottom: 50px;
-   @media(min-width: $tablet-vertical){
+   &__cards-block{
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-   }
-   @media(min-width: $tablet-horizontal){
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-   }
-   @media(min-width: $pc-small){
-      display: grid;
-      row-gap: 60px;
-      grid-template-columns: repeat(4, 1fr);
-   }
-   @media(min-width: $pc-large){
-      column-gap: 40px;
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
+      row-gap: 40px;
+      margin: 50px 0;
+      @media(min-width: $tablet-vertical){
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+      }
+      @media(min-width: $tablet-horizontal){
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+      }
+      @media(min-width: $pc-small){
+         display: grid;
+         row-gap: 60px;
+         grid-template-columns: repeat(4, 1fr);
+      }
+      @media(min-width: $pc-large){
+         column-gap: 40px;
+         display: grid;
+         grid-template-columns: repeat(7, 1fr);
+      }
    }
    &__card-container{
       @media(min-width: $tablet-vertical){
@@ -512,7 +535,7 @@ body{
       display: block;
    }
    &__card-description{
-      @include plain-text-font;
+      @include p-second-font;
       color: var(--color-secondary-accent);
       text-align: center;
    }
@@ -543,16 +566,16 @@ body{
    }
    &__column-title{
       color: var(--color-secondary-accent);
-      @include title-fourth-font;
+      @include title-third-font;
       margin-bottom: 20px; 
    }
    &__column-text{
-      @include plain-text-font;
+      @include p-second-font;
       color: var(--color-secondary-accent);
    }
    &__read-more-link{
       display: block;
-      @include sub-title-font;
+      @include links-font;
       color: var(--color-secondary-accent);
       margin-top: 60px;
       text-align: center;
@@ -626,14 +649,14 @@ body{
       margin-bottom: 0.3em;
    }
    &__sub-title{
-      @include sub-title-font;
+      @include p-first-font;
       color: var(--color-secondary-accent);
       font-size: calc(8px + (16 - 8)*((100vw - 320px) / (1920 - 320))); //16px to 8px
       line-height: 1.2em;
       margin-bottom: 1em;
    }
    &__description{
-      @include plain-text-font;
+      @include p-second-font;
       color: var(--color-secondary-accent);
       font-size: calc(8px + (16 - 8)*((100vw - 320px) / (1920 - 320))); //16px to 8px
       line-height: 1.2em;
@@ -644,6 +667,7 @@ body{
    }
    &__button{
       @include buttons-font;
+      @include buttons-style--blue;
       width: 100px;
       padding: 1.2em;
       margin: 0 auto 1.5em;
@@ -658,7 +682,7 @@ body{
    }
    &__question-link{
       display: block;
-      @include sub-title-font;
+      @include links-font;
       color: var(--color-secondary-accent);
       text-decoration: underline;
       font-size: calc(8px + (16 - 8)*((100vw - 320px) / (1920 - 320))); //16px to 8px

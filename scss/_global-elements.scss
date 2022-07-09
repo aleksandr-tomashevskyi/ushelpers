@@ -71,7 +71,6 @@
          }
          &__title{
             text-transform: uppercase;
-            @include title-third-font;
             margin-bottom: 25px;
             color: var(--color-primary-accent);
          }
@@ -93,8 +92,8 @@
             }
          }
          &__button{
-            @include buttons-effects--dark;
-            @include menu-items-font;
+            @include buttons-style--orange;
+            @include buttons-font;
             text-transform: uppercase;
             background-color: var(--buttons-color);
             width: 260px;
@@ -165,7 +164,6 @@
             }
          }
          &__accepted-title{
-            @include title-third-font;
             color: var(--color-primary-accent);
             display: block;
             margin: 0 auto 15px;
@@ -173,7 +171,6 @@
             text-transform: uppercase;
          }
          &__accepted-text{
-            @include plain-text-font;
             color: var(--color-primary-accent);
             display: block;
             margin: 0 auto 50px;
