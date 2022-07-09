@@ -136,3 +136,15 @@ if((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 
 //    Header inner lists end
+
+//    Fields images change on touch devices
+
+function fieldsImages(event){
+   if(event.target.closest(".fields__card-image-container")){
+   event.target.parentElement.lastChild.previousSibling.classList.toggle("fields__card-image-hover--active");
+   }
+}
+
+if((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))){
+   document.querySelector(".fields__cards-block").addEventListener("click", fieldsImages);
+}
