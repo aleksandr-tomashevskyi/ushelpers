@@ -569,6 +569,8 @@ body{
    height: 150px;
    position: relative;
    overflow: hidden;
+   border-top: solid 1px var(--color-secondary-accent);
+   border-bottom: solid 1px var(--color-secondary-accent);
    @media(min-width: $tablet-vertical){
       height: 200px;
    }
@@ -608,9 +610,14 @@ body{
       left: 0;
    }
    &__inner-container--middle{
-      left: 35%;
-      top: -70%;
-      animation: 45s linear infinite alternate parallax-outer--middle;
+      display: none;
+      @media(min-width: $tablet-horizontal){
+         display: block;
+         left: 25%;
+         top: -40%;
+         animation: 45s linear infinite alternate parallax-outer--middle;
+      }
+
    }
    &__inner-container--right{
       right: 0;
@@ -623,13 +630,17 @@ body{
    }
    &__inner-container--fifth{
       right: 25%;
-      top: -35%;
-      animation: 40s linear infinite alternate parallax-outer--left;
+      top: -25%;
+      animation: 50s linear infinite alternate parallax-outer--left;
    }
    &__inner-container--sixth{
+      display: none;
+      @media(min-width: $tablet-horizontal){
+         display: block;
       right: 25%;
       top: 55%;
       animation: 25s linear infinite alternate parallax-outer--right;
+      }
    }
    &__image-container{
       position: absolute;
@@ -646,82 +657,64 @@ body{
 
 @keyframes parallax-outer--left{
    from{
-      transform: translate(30%, -100%);
-      transform: rotate(0);
+      transform: rotate(0) translate(30%, -100%);
    }
    20%{
-      transform: translate(0, -55%);
-      transform: rotate(5deg);
+      transform: rotate(5deg) translate(0, -55%);
    }
    40%{
-      transform: translate(-20%, -40%);
-      transform: rotate(10deg);
+      transform: rotate(10deg) translate(-20%, -40%);
    }
    60%{
-      transform: translate(-10%, 30%);
-      transform: rotate(5deg);
+      transform: rotate(5deg) translate(-10%, 30%);
    }
    80%{
-      transform: translate(10%, 15%);
-      transform: rotate(0deg);
+      transform: rotate(0deg) translate(10%, 15%);
    }
    to{
-      transform: translate(20%, 20%);
-      transform: rotate(5deg);
+      transform: rotate(5deg) translate(20%, 20%);
    }
 }
 
 @keyframes parallax-outer--middle{
    from{
-      transform: translate(30%, -10%);
-      transform: rotate(-5deg);
+      transform: rotate(-5deg) translate(30%, -10%);
    }
    20%{
-      transform: translate(0, 0);
-      transform: rotate(-10deg);
+      transform: rotate(-10deg), translate(0, 0);
    }
    40%{
-      transform: translate(-30%, 10%);
-      transform: rotate(-15deg);
+      transform: rotate(-15deg) translate(-30%, 10%);
    }
    60%{
-      transform: translate(-50%, 20%);
-      transform: rotate(-10deg);
+      transform: rotate(-10deg) translate(-50%, 20%);
    }
    80%{
-      transform: translate(-20%, 15%);
-      transform: rotate(-5deg);
+      transform: rotate(-5deg) translate(-20%, 15%);
    }
    to{
-      transform: translate(20%, 0);
-      transform: rotate(0deg);
+      transform: rotate(0deg) translate(20%, 0);
    }
 }
 
 @keyframes parallax-outer--right{
    from{
-      transform: translate(-30%, 100%);
-      transform: rotate(120deg);
+      transform: rotate(320deg) translate(-30%, 100%);
    }
    20%{
-      transform: translate(0, 55%);
-      transform: rotate(125deg);
+      transform: rotate(325deg) translate(0, 55%);
    }
    40%{
-      transform: translate(20%, 40%);
-      transform: rotate(120deg);
+      transform: rotate(320deg) translate(20%, 40%);
    }
    60%{
-      transform: translate(10%, -30%);
-      transform: rotate(125deg);
+      transform: rotate(325deg) translate(10%, -30%);
    }
    80%{
-      transform: translate(-10%, -15%);
-      transform: rotate(130deg);
+      transform: rotate(330deg) translate(-10%, -15%);
    }
    to{
-      transform: translate(-20%, -20%);
-      transform: rotate(125deg);
+      transform: rotate(325deg) translate(-20%, -20%);
    }
 }
 
