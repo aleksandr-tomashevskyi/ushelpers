@@ -606,7 +606,7 @@ body{
       }
    }
    &__inner-container--left{
-      animation: 50s linear infinite alternate parallax-outer--left;
+      animation: 50s linear 1s infinite alternate parallax-outer--left;
       left: 0;
    }
    &__inner-container--middle{
@@ -621,7 +621,8 @@ body{
    }
    &__inner-container--right{
       right: 0;
-      animation: 55s linear infinite alternate parallax-outer--right;
+      top: 10%;
+      animation: 45s linear infinite alternate parallax-outer--left;
    }
    &__inner-container--fourth{
       left: 25%;
@@ -645,6 +646,30 @@ body{
    &__image-container{
       position: absolute;
    }
+   // &__image-container--animated{
+   //    &:nth-child(1){
+   //       animation: 35s linear infinite alternate parallax-single;
+   //    }
+   //    &:nth-child(2){
+   //       animation: 45s linear infinite alternate parallax-single;
+   //    }
+   //    &:nth-child(3){
+   //       animation: 55s linear infinite alternate parallax-single;
+   //    }
+   //    &:nth-child(4){
+   //       animation: 40s linear infinite alternate parallax-single;
+   //    }
+   //    &:nth-child(5){
+   //       animation: 30s linear infinite alternate parallax-single;
+   //    }
+   //    &:nth-child(6){
+   //       animation: 25s linear infinite alternate parallax-single;
+   //    }
+   //    &:nth-child(7){
+   //       animation: 30s linear infinite alternate parallax-single;
+   //    }
+   //    animation: 35s linear infinite alternate parallax-single;
+   // }
    &__image{
       width: 100%;
    }
@@ -652,69 +677,6 @@ body{
       width: 50%;
       position: relative;
       left: 40%;
-   }
-}
-
-@keyframes parallax-outer--left{
-   from{
-      transform: rotate(0) translate(30%, -100%);
-   }
-   20%{
-      transform: rotate(5deg) translate(0, -55%);
-   }
-   40%{
-      transform: rotate(10deg) translate(-20%, -40%);
-   }
-   60%{
-      transform: rotate(5deg) translate(-10%, 30%);
-   }
-   80%{
-      transform: rotate(0deg) translate(10%, 15%);
-   }
-   to{
-      transform: rotate(5deg) translate(20%, 20%);
-   }
-}
-
-@keyframes parallax-outer--middle{
-   from{
-      transform: rotate(-5deg) translate(30%, -10%);
-   }
-   20%{
-      transform: rotate(-10deg), translate(0, 0);
-   }
-   40%{
-      transform: rotate(-15deg) translate(-30%, 10%);
-   }
-   60%{
-      transform: rotate(-10deg) translate(-50%, 20%);
-   }
-   80%{
-      transform: rotate(-5deg) translate(-20%, 15%);
-   }
-   to{
-      transform: rotate(0deg) translate(20%, 0);
-   }
-}
-
-@keyframes parallax-outer--right{
-   from{
-      transform: rotate(320deg) translate(-30%, 100%);
-   }
-   20%{
-      transform: rotate(325deg) translate(0, 55%);
-   }
-   40%{
-      transform: rotate(320deg) translate(20%, 40%);
-   }
-   60%{
-      transform: rotate(325deg) translate(10%, -30%);
-   }
-   80%{
-      transform: rotate(330deg) translate(-10%, -15%);
-   }
-   to{
-      transform: rotate(325deg) translate(-20%, -20%);
    }
 }
 
