@@ -6,6 +6,7 @@ let burgerMenuMemoryFlag = false;
 let listActivationFlag = false;
 let navInnerElements;
 let navListTrigger;
+let windowScrollValue;
 
 
 //    Slick slider start
@@ -137,7 +138,7 @@ if((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 //    Header inner lists end
 
-//    Fields images change on touch devices
+//    Fields images change on touch devices start
 
 function fieldsImages(event){
    if(event.target.closest(".fields__card-image-container")){
@@ -148,3 +149,24 @@ function fieldsImages(event){
 if((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))){
    document.querySelector(".fields__cards-block").addEventListener("click", fieldsImages);
 }
+
+//    Fields images change on touch devices end
+
+//    Parallax scroll start
+const parallaxContainer = document.querySelector(".parallax");
+const parallaxOuterContainer = document.querySelector(".parallax__outer-container")
+let parallaxContainerPosition = parallaxContainer.offsetTop - window.innerHeight;
+
+parallaxScroll();
+
+function parallaxScroll(){
+windowScrollValue = window.scrollY;
+let parallaxChangeValue = (parallaxContainerPosition - windowScrollValue);
+if(windowScrollValue >= parallaxContainerPosition & !(windowScrollValue >=(parallaxContainerPosition + window.innerHeight))){
+   parallaxOuterContainer.style.top=`${parallaxChangeValue*0.2}px`;
+}
+}
+
+document.addEventListener("scroll", parallaxScroll)
+
+//    Parallax scroll end

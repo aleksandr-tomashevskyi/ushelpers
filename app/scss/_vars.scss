@@ -163,22 +163,22 @@ $pc-large: 1640px;
 
 @keyframes parallax-outer--left{
    from{
-      transform: rotate(0) translate(30%, -100%);
+      transform: rotate(0) translate(30%, 100%);
    }
    20%{
-      transform: rotate(5deg) translate(0, -55%);
+      transform: rotate(5deg) translate(0, 55%);
    }
    40%{
-      transform: rotate(10deg) translate(-20%, -40%);
+      transform: rotate(10deg) translate(-20%, 40%);
    }
    60%{
-      transform: rotate(5deg) translate(-10%, 30%);
+      transform: rotate(5deg) translate(-10%, 130%);
    }
    80%{
-      transform: rotate(0deg) translate(10%, 15%);
+      transform: rotate(0deg) translate(10%, 115%);
    }
    to{
-      transform: rotate(5deg) translate(20%, 20%);
+      transform: rotate(5deg) translate(20%, 90%);
    }
 }
 
@@ -190,16 +190,16 @@ $pc-large: 1640px;
       transform: rotate(-10deg), translate(0, 0);
    }
    40%{
-      transform: rotate(-15deg) translate(-30%, 10%);
+      transform: rotate(-15deg) translate(30%, 10%);
    }
    60%{
-      transform: rotate(-10deg) translate(-50%, 20%);
+      transform: rotate(-10deg) translate(50%, 20%);
    }
    80%{
-      transform: rotate(-5deg) translate(-20%, 15%);
+      transform: rotate(-5deg) translate(80%, 15%);
    }
    to{
-      transform: rotate(0deg) translate(20%, 0);
+      transform: rotate(0deg) translate(40%, 0);
    }
 }
 
@@ -226,21 +226,42 @@ $pc-large: 1640px;
 
 @keyframes parallax-single{
    from{
-      transform: rotate(320deg) translate(-5%, 10%);
+      transform: rotate(0deg) translate(10%, 215%);
    }
    20%{
-      transform: rotate(325deg) translate(0, 15%);
+      transform: rotate(5deg) translate(20%, 217%);
    }
    40%{
-      transform: rotate(320deg) translate(15%, 5%);
+      transform: rotate(10deg) translate(15%, 219%);
    }
    60%{
-      transform: rotate(325deg) translate(20%, -10%);
+      transform: rotate(5deg) translate(10%, 222%);
    }
    80%{
-      transform: rotate(330deg) translate(0%, -30%);
+      transform: rotate(0deg) translate(5%, 217%);
    }
    to{
-      transform: rotate(325deg) translate(-10%, -20%);
+      transform: rotate(-5deg) translate(-15%, 214%);
+   }
+}
+
+@keyframes parallax-single-reverse{
+   from{
+      transform: rotate(0deg) translate(-10%, 15%);
+   }
+   20%{
+      transform: rotate(-5deg) translate(-20%, 17%);
+   }
+   40%{
+      transform: rotate(-10deg) translate(-35%, 19%);
+   }
+   60%{
+      transform: rotate(-5deg) translate(-10%, 22%);
+   }
+   80%{
+      transform: rotate(0deg) translate(5%, 17%);
+   }
+   to{
+      transform: rotate(5deg) translate(10%, 14%);
    }
 }
