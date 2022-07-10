@@ -162,7 +162,7 @@ parallaxScroll();
 function parallaxScroll(){
 windowScrollValue = window.scrollY;
 let parallaxChangeValue = (parallaxContainerPosition - windowScrollValue);
-if(windowScrollValue >= parallaxContainerPosition & !(windowScrollValue >=(parallaxContainerPosition + window.innerHeight))){
+if(windowScrollValue >= parallaxContainerPosition & !(windowScrollValue >=((parallaxContainerPosition + window.innerHeight)+200))){
    parallaxOuterContainer.style.top=`${parallaxChangeValue*0.2}px`;
 }
 }
