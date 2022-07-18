@@ -22,7 +22,6 @@ function buildStyles() {
 function buildJs(){
   return gulp.src([
     "./node_modules/slick-carousel/slick/slick.min.js",
-    "./node_modules/animejs/lib/anime.min.js"
   ])
   .pipe(concat("libs.min.js"))
   .pipe(uglify())
