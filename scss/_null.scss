@@ -27,7 +27,11 @@ input, button, area{
    -webkit-appearance: none;}
 input::-ms-clear{display: none;}
 button{cursor: pointer;}
-a, a:visited{text-decoration: none; color: inherit; font-family: inherit;}
+a, a:visited{
+   text-decoration: none; 
+   color: inherit; 
+   font-family: inherit;
+}
 a:hover{text-decoration: none;}
 ul, li{list-style: none;}
 h1, h2, h3, h4, h5, h6{font-size: inherit; font-weight: 400; margin: 0; padding: 0;}

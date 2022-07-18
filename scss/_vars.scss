@@ -49,7 +49,7 @@ $pc-large: 1640px;
 @mixin title-third-font{
    font-family: 'Montserrat', sans-serif;
    font-weight: 700;
-   font-size: 12px;
+   font-size: 16px;
    line-height: 1.36em;
    @media(min-width: 768px){
       font-size: 24px;
@@ -77,10 +77,10 @@ $pc-large: 1640px;
 @mixin p-first-font{
    font-family: 'Montserrat', sans-serif;
    font-weight: 400;
-   font-size: 24px;
+   font-size: 11px;
    line-height: 1.36em;
    @media(min-width: 768px){
-      font-size: 21px;
+      font-size: 24px;
    }
 }
 @mixin p-second-font{
@@ -110,15 +110,16 @@ $pc-large: 1640px;
 @mixin links-font{
    font-family: 'Montserrat', sans-serif;
    font-weight: 400;
-   font-size: 24px;
+   font-size: 20px;
    line-height: 1.36em;
    text-decoration: underline;
+   transition: all 0.1s;
    &:hover{
    font-weight: 700;
    text-decoration: none;
    }
    @media(min-width: $tablet-vertical){
-   font-size: 20px;
+   font-size: 24px;
    }
 }
 @mixin background-image-settings{
