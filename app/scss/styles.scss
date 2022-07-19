@@ -685,7 +685,10 @@ body{
       @media(min-width: $tablet-vertical){
          display: flex;
          flex-direction: row;
-         column-gap: 99px;
+         column-gap: 25px;
+      }
+      @media(min-width: $pc-small){
+         column-gap: 90px;
       }
    }
    &__column{
@@ -798,7 +801,7 @@ body{
       @include buttons-font;
       @include buttons-style--blue;
       width: 100px;
-      padding: 1.2em;
+      padding: 1.8em;
       margin: 0 auto 1.5em;
       // height: 77px;
       background-color: var(--color-secondary-accent);
@@ -807,6 +810,9 @@ body{
       line-height: 1em;
       @media(min-width: $tablet-vertical){
          width: 200px;
+      }
+      @media(min-width: $pc-small){
+         width: 300px;
       }
    }
    &__question-link{
@@ -865,17 +871,20 @@ body{
    
    .solutions{
       margin-top: 70px;
+      @media(min-width: $tablet-vertical){
+         margin-top: 120px;
+      }
       &__title{
          @include title-second-font;
          color: var(--color-secondary-accent);
-         
       }
       &__cards{
-         margin-top: 40px;
+         margin-top: 50px;
          display: flex;
          flex-direction: column;
          row-gap: 50px;
          @media(min-width: $tablet-vertical){
+         margin-top: 80px;
             flex-direction: row;
             flex-wrap: wrap;
             column-gap: 20px;
@@ -924,6 +933,49 @@ body{
             background-size: contain;
             background-position: center;
          }
+      }
+   }
+   
+   .benefits{
+      margin-top: 70px;
+      @media(min-width: $tablet-vertical){
+         margin-top: 120px;
+      }
+      &__title{
+         @include title-second-font;
+         color: var(--color-secondary-accent);
+         text-align: center;
+      }
+      &__columns{
+         margin-top: 50px;
+         display: flex;
+         flex-direction: column;
+         row-gap: 40px;
+         flex-wrap: wrap;
+         // align-items: center;
+         @media(min-width: $tablet-vertical){
+            flex-direction: row;
+            margin-top: 80px;
+         }
+      }
+      &__column{
+         width: 280px;
+         margin: 0 auto;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+      &__column-title{
+         margin-top: 30px;
+         @include title-third-font;
+         text-align: center;
+         color: var(--color-secondary-accent);
+         margin-bottom: 10px;
+      }
+      &__column-description{
+         @include p-second-font;
+         color: var(--color-secondary-accent);
+         text-align: center;
       }
    }
    
