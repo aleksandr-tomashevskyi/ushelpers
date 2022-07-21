@@ -8,7 +8,7 @@
    --buttons-color: #393246;
    --decorative-line: #878787;
    --lines: #D5D5D5;
- }
+}
 
 //screens
 $tablet-vertical: 768px;
@@ -27,21 +27,28 @@ $pc-large: 1640px;
 }
 @mixin title-first-font{
    font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 32px;
+   font-weight: 700;
+   font-size: 32px;
+   line-height: 1em;
+   text-transform: uppercase;
+   margin-bottom: 23px;
+   @media(min-width: $tablet-vertical){
+      font-size: 64px;
       line-height: 1em;
-      text-transform: uppercase;
-      @media(min-width: 768px){
-         font-size: 64px;
-         line-height: 1em;
-      }
+      margin-bottom: 30px;
+   }
+   @media(min-width: $tablet-horizontal){
+      margin-bottom: 50px;
+   }
 }
 @mixin title-second-font{
    font-family: 'Montserrat', sans-serif;
    font-weight: 700;
    font-size: 30px;
    line-height: 1.36em;
+   margin-bottom: 30px;
    @media(min-width: 768px){
+      margin-bottom: 50px;
       font-size: 40px;
       line-height: 1.36em;
    }
@@ -50,37 +57,23 @@ $pc-large: 1640px;
    font-family: 'Montserrat', sans-serif;
    font-weight: 700;
    font-size: 20px;
+   margin-bottom: 20px; 
    line-height: 1.36em;
    @media(min-width: 768px){
       font-size: 24px;
       line-height: 1.36em;
+      margin-bottom: 15px; 
    }
 }
-// @mixin title-fourth-font{
-//    font-family: 'Montserrat', sans-serif;
-//    font-weight: 700;
-//    font-size: 21px;
-//    line-height: 28px;
-// }
-// @mixin title-fifth-font{
-//    font-family: 'Montserrat', sans-serif;
-//    font-weight: 700;
-//    font-size: 16px;
-//    line-height: 22px;
-// }
-// @mixin sub-title-font{
-//    font-family: 'Montserrat', sans-serif;
-//    font-weight: 700;
-//    font-size: 16px;
-//    line-height: 21px;
-// }
 @mixin p-first-font{
    font-family: 'Montserrat', sans-serif;
    font-weight: 400;
    font-size: 18px;
    line-height: 1.36em;
+   margin-bottom: 5px;
    @media(min-width: 768px){
       font-size: 24px;
+      margin-bottom: 10px;
    }
 }
 @mixin p-second-font{
@@ -104,8 +97,12 @@ $pc-large: 1640px;
 @mixin buttons-font{
    font-family: 'Montserrat', sans-serif;
    font-weight: 700;
-   font-size: 16px;
-   line-height: 27px;
+   font-size: 12px;
+   line-height: 1.36em;
+   @media(min-width: $tablet-vertical){
+      font-size: 16px;
+   }
+   
 }
 @mixin links-font{
    font-family: 'Montserrat', sans-serif;
@@ -115,11 +112,11 @@ $pc-large: 1640px;
    text-decoration: underline;
    transition: all 0.1s;
    &:hover{
-   font-weight: 700;
-   text-decoration: none;
+      font-weight: 700;
+      text-decoration: none;
    }
    @media(min-width: $tablet-vertical){
-   font-size: 24px;
+      font-size: 24px;
    }
 }
 @mixin background-image-settings{
@@ -127,37 +124,38 @@ $pc-large: 1640px;
    background-size: cover;
    background-origin: padding-box;
 }
+@mixin buttons-settings{
+   border-radius: 1em;
+   padding: 20px;
+   @media(min-width: $tablet-vertical){
+      padding: 30px;
+   }
+}
 @mixin buttons-style--blue{
    background-color: var(--color-secondary-accent);
    transition-duration: 0.3s;
-   border-radius: 1rem;
    color: #FFFFFF;
    border: solid var(--color-secondary-accent) 2px;
    &:hover{
       background-color: transparent;
       color: var(--color-secondary-accent);
    }
-   // &:active{
-   //    background-color: #4A415A;
-   //    border: solid var(--buttons-color) 1px;
-   //    color: #FFFFFF;
-   // }
 }
 @mixin buttons-style--orange{
    background-color: var(--color-primary-accent);
    transition-duration: 0.3s;
-   border-radius: 1rem;
    color: #FFFFFF;
    border: solid var(--color-primary-accent) 2px;
    &:hover{
       background-color: transparent;
       color: var(--color-primary-accent);
    }
-   // &:active{
-   //    background-color: #63557C;
-   //    border: solid var(--buttons-color) 1px;
-   //    color: #FFFFFF;
-   // }
+}
+@mixin sections-margins{
+   margin-top: 70px;
+   @media(min-width: $tablet-vertical){
+      margin-top: 120px;
+   }
 }
 
 // keyframes for animation
