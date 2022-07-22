@@ -112,7 +112,7 @@ function innerListClickCheckBurger(event){
 }
 
 function checkScreenSize(event){ //check whether we are in burger or full size menu to choose appropriate behavior
-   if(document.documentElement.clientWidth > 1024){
+   if(document.documentElement.clientWidth >= 1024){
       innerListClickCheck(event);
    } else{
       innerListClickCheckBurger(event);
