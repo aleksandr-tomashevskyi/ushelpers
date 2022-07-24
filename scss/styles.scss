@@ -336,6 +336,12 @@ body{
          column-gap: 40px;
       }
    }
+   &__columns--solutions-children{
+      @media(min-width: $tablet-horizontal){
+         flex-direction: row-reverse;
+         column-gap: 40px;
+      }
+   }
    &__column--index-page{
       flex: 0 0 32%;
    }
@@ -346,14 +352,14 @@ body{
       @include p-first-font;
       color: var(--color-secondary-accent);
       display: block;
-      margin-bottom: 20px;
+      margin: 0 auto 20px;
       text-align: center;
       @media(min-width: $tablet-vertical){
-         margin-bottom: 30px;
+         margin: 0 auto 30px;
          max-width: 442px;
       }
       @media(min-width: $tablet-horizontal){
-         margin-bottom: 50px;
+         margin: 0 auto 50px;
          max-width: none;
       }
    }
@@ -1145,15 +1151,15 @@ body{
    }
 }
 .four-columns-grid{
-      display: grid;
-      row-gap: 40px;
-      @media(min-width: $tablet-vertical){
-         row-gap: 60px;
-      }
-      @media(min-width: $tablet-horizontal){
-         grid-template-columns: 0.7fr 1fr 0.7fr 1fr;
-         row-gap: 0px;
-      }
+   display: grid;
+   row-gap: 40px;
+   @media(min-width: $tablet-vertical){
+      row-gap: 60px;
+   }
+   @media(min-width: $tablet-horizontal){
+      grid-template-columns: 0.7fr 1fr 0.7fr 1fr;
+      row-gap: 0px;
+   }
    &__grid-cell{
       @media(min-width: $tablet-horizontal){
          position: relative;  
@@ -1183,10 +1189,10 @@ body{
          border-top: solid var(--color-secondary-accent) 1px;
       }
       &:nth-child(5){
-      @media(min-width: $tablet-horizontal){
-         border-left: solid var(--color-secondary-accent) 1px;
+         @media(min-width: $tablet-horizontal){
+            border-left: solid var(--color-secondary-accent) 1px;
+         }
       }
-   }
    }
    &__grid-cell--last{
       @media(min-width: $tablet-horizontal){
@@ -1216,7 +1222,7 @@ body{
       }
    }
    &__cell-image-container{
-
+      
    }
    &__cell-image{
       width: 100%;
@@ -1234,6 +1240,69 @@ body{
    }
 }
 
+
+.staffing{
+   @include sections-margins;
+   padding: 20px 0;
+   @media(min-width: $tablet-vertical){
+      padding: 40px 0;
+   }
+   @media(min-width: $tablet-horizontal){
+      padding: 60px 0;
+   }
+   &__columns{
+      @media(min-width: $pc-small){
+         display: flex;
+         column-gap: 40px;
+      }
+      @media(min-width: $pc-large){
+         column-gap: 80px;
+      }
+   }
+   &__column{
+      @media(min-width: $pc-small){
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+      }
+      &:first-child{
+         flex: 0 0 55%
+      }
+   }
+   &__article{
+      @include p-first-font;
+      color: #FFFFFF;
+      margin-bottom: 30px;
+      @media(min-width: 768px){
+         margin-bottom: 50px;
+      }   
+   }
+   &__title{
+      @include title-second-font;
+      color: #FFFFFF;
+      border-left: solid #FFFFFF 3px;
+      padding: 0 15px;
+      line-height: 1em;
+   }
+}
+
+.staffing--outstaffing-page{
+   background: url(../img/our-solutions-page/oustaffing-background.jpg), no-repeat;
+   background-position: 48% center;
+   background-size: cover;
+   @media(min-width: $tablet-vertical){
+   background-position: 35% center;
+   }
+   @media(min-width: $tablet-horizontal){
+   background-position: 20% center;
+   }
+   @media(min-width: $pc-small){
+      background-position: 70% center;
+   }
+   @media(min-width: $pc-large){
+      background-position: 40% center;
+   }
+}
 
 .footer{
    @include sections-margins;
