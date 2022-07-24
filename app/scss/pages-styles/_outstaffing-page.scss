@@ -1,0 +1,62 @@
+.staffing{
+   @include sections-margins;
+   padding: 20px 0;
+   @media(min-width: $tablet-vertical){
+      padding: 40px 0;
+   }
+   @media(min-width: $tablet-horizontal){
+      padding: 60px 0;
+   }
+   &__columns{
+      @media(min-width: $pc-small){
+         display: flex;
+         column-gap: 40px;
+      }
+      @media(min-width: $pc-large){
+         column-gap: 80px;
+      }
+   }
+   &__column{
+      @media(min-width: $pc-small){
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+      }
+      &:first-child{
+         flex: 0 0 55%
+      }
+   }
+   &__article{
+      @include p-first-font;
+      color: #FFFFFF;
+      margin-bottom: 30px;
+      @media(min-width: 768px){
+         margin-bottom: 50px;
+      }   
+   }
+   &__title{
+      @include title-second-font;
+      color: #FFFFFF;
+      border-left: solid #FFFFFF 3px;
+      padding: 0 15px;
+      line-height: 1em;
+   }
+}
+
+.staffing--outstaffing-page{
+   background: url(../img/our-solutions-page/oustaffing-background.jpg), no-repeat;
+   background-position: 48% center;
+   background-size: cover;
+   @media(min-width: $tablet-vertical){
+   background-position: 35% center;
+   }
+   @media(min-width: $tablet-horizontal){
+   background-position: 20% center;
+   }
+   @media(min-width: $pc-small){
+      background-position: 70% center;
+   }
+   @media(min-width: $pc-large){
+      background-position: 40% center;
+   }
+}

@@ -1,0 +1,160 @@
+.container-for-full-width{
+   width: 290px;
+   margin: 0 auto;
+   // padding: 0 15px;
+   @media(min-width: $tablet-vertical){
+      width: 676px;
+   }
+   @media(min-width: $tablet-horizontal){
+      width: 940px;
+   }
+   @media(min-width: $pc-small){
+      width: auto;
+   }
+}
+
+.staff-leasing{
+   @include sections-margins;
+   &__full-width-container{
+      @media(max-width: $pc-small){
+         height: 252px;
+         background-size: cover;
+         background-position: center center;
+         margin: 0 calc(50% - 50vw);
+         // background-color: rgba(0, 0, 0, 0.8);
+         background-image: url(../img/our-solutions-page/staff-leasing-section-1.jpg);
+         box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+      }
+      @media(min-width: $tablet-vertical) and (max-width: $pc-small){
+         height: 512px;
+      }
+   }
+   &__columns{
+      @media(min-width: $pc-small){
+         display: flex;
+         column-gap: 80px;
+      }
+   }
+   &__column{
+   }
+   &__column--right{
+      flex: 0 0 40%;
+      display: none;
+      @media(min-width: $pc-small){
+         display: block;
+      }
+   }
+   &__image{
+      width: 100%;
+   }
+   &__image-description{
+      margin-top: 25px;
+      @include p-first-font;
+      line-height: 1.1em;
+      color: var(--color-secondary-accent);
+   }
+   &__title{
+      @include title-second-font;
+      color: #FFFFFF;
+      line-height: 1.05em;
+      font-size: 18px;
+      @media(min-width: $pc-small){
+         color: var(--color-secondary-accent);
+      }
+   }
+   &__article{
+      margin-top: 25px;
+      @include p-first-font;
+      line-height: 1.1em;
+      color: var(--color-secondary-accent);
+   }
+}
+
+.work-stages{
+   @include sections-margins;
+   &__full-width-container{
+      @extend .staff-leasing__full-width-container;
+      @media(max-width: $pc-small){
+         padding: 40px 0;
+         height: auto;
+         background-image: url(../img/our-solutions-page/staff-leasing-section-2.jpg);
+      }
+   }
+   &__columns{
+      @media(min-width: $pc-small){
+         display: flex;
+         column-gap: 80px;
+      }
+   }
+   &__column--left{
+      flex: 0 0 40%;
+   }
+   &__image-container{
+      display: none;
+      @media(min-width: $pc-small){
+         display: block;
+      }
+   }
+   &__image{
+      width: 100%;
+   }
+   &__list-columns{
+      @media(min-width: $pc-small){
+         display: flex;
+      }
+   }
+   &__title{
+      @include title-second-font;
+      color: #FFFFFF;
+      line-height: 1.05em;
+      font-size: 18px;
+      @media(min-width: $pc-small){
+         color: var(--color-secondary-accent);
+      }
+   }
+   &__article{
+      margin-top: 25px;
+      @include p-first-font;
+      line-height: 1.1em;
+      color: var(--color-secondary-accent);
+   }
+   &__article--white{
+      color: #FFFFFF;
+      @media(min-width: $pc-small){
+         color: var(--color-secondary-accent);
+      }
+   }
+   &__list-columns{
+      padding-left: 20px;
+      @media(min-width: $pc-small){
+         column-gap: 15px;
+      }
+   }
+   &__article-list, &__article-list-item{
+      @include p-first-font;
+      line-height: 1em;
+      color: #FFFFFF;
+      list-style: outside;
+      @media(min-width: $pc-small){
+         color: var(--color-secondary-accent);
+      }
+   }
+   &__article-list-item{
+      @media(min-width: $pc-small){
+      line-height: 1.2em;
+      margin-bottom: 20px;
+      }
+   }
+   &__article-container:first-child{
+      margin-bottom: 86px;
+      @media(min-width: $tablet-vertical){
+         margin-bottom: 120px;
+      }
+      @media(min-width: $pc-small){
+         margin-bottom: 0px;
+      }
+   }
+}
