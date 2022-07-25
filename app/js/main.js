@@ -154,7 +154,6 @@ if((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 //    Parallax scroll start
 const parallaxContainers = document.querySelectorAll(".parallax");
-console.log(parallaxContainers)
 
 parallaxScroll();
 
