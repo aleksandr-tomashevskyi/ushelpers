@@ -35,35 +35,47 @@
       }
    }
    &__read-more{
-      @include p-second-font;
-      color: var(--site-background-color);
+      display: none;
+      @media(min-width: $tablet-horizontal){
+         display: block;
+         @include p-second-font;
+         color: var(--site-background-color);
+         margin: 0;
+         padding: 0;
+      }
    }
-   &__grid-cell--main{
+   &__grid-cell--first{
       @media(min-width: $tablet-horizontal){
          grid-column-start: span 2;
          grid-row-start: span 2;
+         &:hover{
+            box-shadow: none;
+         }
       }
    }
-   &__grid-cell--vertical{
+   &__grid-cell--second{
       @media(min-width: $tablet-horizontal){
          grid-column-start: 4;
          grid-row-start: span 2;
          border-left: solid var(--color-secondary-accent) 1px;
       }
    }
-   &__grid-cell--horizontal{
+
+   &__grid-cell--fifth{
+      @media(min-width: $tablet-horizontal){
+         border-left: solid var(--color-secondary-accent) 1px;
+      }
+   }
+
+   &__grid-cell--fourth, &__grid-cell--fifth{
       @media(min-width: $tablet-horizontal){
          grid-column-start: span 2;
          grid-row-start: 3;
          border-top: solid var(--color-secondary-accent) 1px;
       }
-      &:nth-child(5){
-         @media(min-width: $tablet-horizontal){
-            border-left: solid var(--color-secondary-accent) 1px;
-         }
-      }
    }
-   &__grid-cell--last{
+
+   &__grid-cell--sixth{
       @media(min-width: $tablet-horizontal){
          grid-column-start: 3;
          grid-row-start: 1;
