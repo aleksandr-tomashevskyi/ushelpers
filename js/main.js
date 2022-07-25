@@ -142,7 +142,7 @@ if((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 function fieldsImages(event){
    if(event.target.closest(".fields__card-image-container")){
-   event.target.parentElement.lastChild.previousSibling.classList.toggle("fields__card-image-hover--active");
+      event.target.parentElement.lastChild.previousSibling.classList.toggle("fields__card-image-hover--active");
    }
 }
 
@@ -153,18 +153,21 @@ if((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 //    Fields images change on touch devices end
 
 //    Parallax scroll start
-const parallaxContainer = document.querySelector(".parallax");
-const parallaxOuterContainer = document.querySelector(".parallax__outer-container")
-let parallaxContainerPosition = parallaxContainer.offsetTop - window.innerHeight;
+const parallaxContainers = document.querySelectorAll(".parallax");
+console.log(parallaxContainers)
 
 parallaxScroll();
 
 function parallaxScroll(){
-windowScrollValue = window.scrollY;
-let parallaxChangeValue = (parallaxContainerPosition - windowScrollValue);
-if(windowScrollValue >= parallaxContainerPosition & !(windowScrollValue >=((parallaxContainerPosition + window.innerHeight)+200))){
-   parallaxOuterContainer.style.top=`${parallaxChangeValue*0.2}px`;
-}
+   parallaxContainers.forEach((element)=> {
+      let parallaxContainerPosition = element.offsetTop - window.innerHeight;
+      windowScrollValue = window.scrollY;
+      let parallaxChangeValue = (parallaxContainerPosition - windowScrollValue);
+      const parallaxOuterContainer = element.firstChild.nextSibling;
+      if(windowScrollValue >= parallaxContainerPosition & !(windowScrollValue >=((parallaxContainerPosition + window.innerHeight)+200))){
+         parallaxOuterContainer.style.top=`${parallaxChangeValue*0.2}px`;
+      }
+   })
 }
 
 document.addEventListener("scroll", parallaxScroll)
