@@ -351,6 +351,9 @@ body{
    &__column--staff-leasing-page{
       flex: 0 0 52%;
    }
+   &__column--temporary-staff-page{
+      flex: 0 0 48%;
+   }
    &__description{
       @include p-first-font;
       color: var(--color-secondary-accent);
