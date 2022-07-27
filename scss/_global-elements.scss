@@ -809,6 +809,20 @@ body{
          }
       }
 
+      .choice-links{
+         @include sections-margins;
+         &__links{
+            @include p-second-font;
+            @include sections-margins;
+            color: var(--color-secondary-accent);
+            text-align: center;
+         }
+         &__link{
+            @include links-font;
+            color: var(--color-secondary-accent);
+         }
+      }
+
       .footer{
          @include sections-margins;
          background-color: var(--color-secondary-accent);
