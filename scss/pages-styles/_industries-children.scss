@@ -6,6 +6,7 @@
          grid-template-columns: 1fr 0.7fr;
          column-gap: 30px;
          row-gap: 15px;
+      align-items: center;
       }
       @media(min-width: $pc-large){
          display: grid;
@@ -47,13 +48,51 @@
    }
    &__inner-grid-cell--first{
       grid-column-start: span 2;
-      background: url('../../img/industries-page-group/warehouse-cell-bg-1.png') no-repeat;
    }
-   &__inner-grid-cell--second{
-      background: url('../../img/industries-page-group/warehouse-cell-bg-2.png') no-repeat;
+   &__inner-grid-cell--first-warehouse{
+      background: url('../../img/industries-page-group/warehouse-cell-bg-1.webp') no-repeat;
    }
-   &__inner-grid-cell--third{
-      background: url('../../img/industries-page-group/warehouse-cell-bg-3.png') no-repeat;
+   &__inner-grid-cell--second-warehouse{
+      background: url('../../img/industries-page-group/warehouse-cell-bg-2.webp') no-repeat;
+   }
+   &__inner-grid-cell--third-warehouse{
+      background: url('../../img/industries-page-group/warehouse-cell-bg-3.webp') no-repeat;
+   }
+   &__inner-grid-cell--first-trading{
+      background: url('../../img/industries-page-group/trading-cell-bg-1.webp') no-repeat;
+   }
+   &__inner-grid-cell--second-trading{
+      background: url('../../img/industries-page-group/trading-cell-bg-2.webp') no-repeat;
+   }
+   &__inner-grid-cell--third-trading{
+      background: url('../../img/industries-page-group/trading-cell-bg-3.webp') no-repeat;
+   }
+   &__inner-grid-cell--first-industrial{
+      background: url('../../img/industries-page-group/industrial-cell-bg-1.webp') no-repeat;
+   }
+   &__inner-grid-cell--second-industrial{
+      background: url('../../img/industries-page-group/industrial-cell-bg-2.webp') no-repeat;
+   }
+   &__inner-grid-cell--third-industrial{
+      background: url('../../img/industries-page-group/industrial-cell-bg-3.webp') no-repeat;
+   }
+   &__inner-grid-cell--first-food{
+      background: url('../../img/industries-page-group/food-cell-bg-1.webp') no-repeat;
+   }
+   &__inner-grid-cell--second-food{
+      background: url('../../img/industries-page-group/food-cell-bg-2.webp') no-repeat;
+   }
+   &__inner-grid-cell--third-food{
+      background: url('../../img/industries-page-group/food-cell-bg-3.webp') no-repeat;
+   }
+   &__inner-grid-cell--first-agriculture{
+      background: url('../../img/industries-page-group/agriculture-cell-bg-1.webp') no-repeat;
+   }
+   &__inner-grid-cell--second-agriculture{
+      background: url('../../img/industries-page-group/agriculture-cell-bg-2.webp') no-repeat;
+   }
+   &__inner-grid-cell--third-agriculture{
+      background: url('../../img/industries-page-group/agriculture-cell-bg-3.webp') no-repeat;
    }
    &__inner-grid-cell{
       position: relative;
