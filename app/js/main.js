@@ -10,7 +10,7 @@ let windowScrollValue;
 
 
 //    Slick slider start
-$(document).ready(function(){
+jQuery(function(){
    $('.slider').slick({
       arrows: true,
       speed: 500,
