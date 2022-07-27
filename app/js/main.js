@@ -147,7 +147,9 @@ function fieldsImages(event){
 }
 
 if((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))){
-   document.querySelector(".fields__cards-block").addEventListener("click", fieldsImages);
+   if(document.querySelector(".fields__cards-block")){
+      document.querySelector(".fields__cards-block").addEventListener("click", fieldsImages);
+   }
 }
 
 //    Fields images change on touch devices end
