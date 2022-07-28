@@ -31,7 +31,7 @@
          display: block;
          @include p-second-font;
          color: var(--site-background-color);
-         margin: 0 0 -15px 0;
+         margin: 0 0 -5px 0;
          padding: 0;
       }
    }
@@ -64,12 +64,6 @@
          grid-column-start: span 2;
          grid-row-start: 3;
          border-top: solid var(--color-secondary-accent) 1px;
-      }
-   }
-
-   &__grid-cell--third, &__grid-cell--sixth{
-      @media(min-width: $tablet-horizontal){
-         padding: 0 15px;
       }
    }
 
