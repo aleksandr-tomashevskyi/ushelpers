@@ -1,0 +1,83 @@
+.contacts{
+   @include sections-margins;
+   &__columns{
+      @media(min-width: $pc-small){
+         display: flex;
+      }
+   }
+   &__column{
+      flex: 0 0 50%;
+   }
+   &__block-wrapper{
+      background: url(../img/contacts.png) no-repeat;
+      background-size: contain;
+      background-position: center center;
+      width: 100%;
+      height: 140px;
+      position: relative;
+      @media(min-width: $tablet-vertical){
+         height: 250px;
+      }
+      @media(min-width: $tablet-horizontal){
+         height: 300px;
+      }
+   }
+   &__text-container{
+      width: 150px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @media(min-width: $tablet-vertical){
+         width: 300px;
+      }
+      @media(min-width: $tablet-horizontal){
+         width: 350px;
+      }
+      @media(min-width: $pc-small){
+         width: 300px;
+      }
+      @media(min-width: $pc-large){
+         width: 350px;
+      }
+   }
+   &__title{
+      @include title-third-font;
+      color: #FFFFFF;
+      font-size: 10px;
+      margin: 0;
+      @media(min-width: $tablet-vertical){
+         font-size: 18px;
+      }
+      @media(min-width: $tablet-horizontal){
+         font-size: 22px;
+      }
+      @media(min-width: $pc-small){
+         font-size: 16px;
+      }
+      @media(min-width: $pc-large){
+         font-size: 20px;
+      }
+   }
+   &__description{
+      @include p-second-font;
+      color: #FFFFFF;
+      font-size: 8px;
+      line-height: 1em;
+      @media(min-width: $tablet-vertical){
+         font-size: 16px;
+      }
+      @media(min-width: $tablet-horizontal){
+         font-size: 20px;
+      }
+      @media(min-width: $pc-small){
+         font-size: 14px;
+      }
+      @media(min-width: $pc-large){
+         font-size: 18px;
+      }
+   }
+   &__image{
+      width: 100%;
+   }
+}
