@@ -56,7 +56,7 @@ body{
    width: 100%;
    color: var(--color-secondary-accent);
    transition: all 0.2s;
-   z-index: 5;
+   z-index: 15;
    background-color: var(--site-background-color);
    border-bottom: solid var(--color-secondary-accent) 1px;
    @media(min-width: $tablet-vertical){
@@ -108,7 +108,7 @@ body{
       width: 120px;
       // height: 70px;
    }
-   &__image{
+   img{
       width: 100%;
       object-fit: contain;
    }
