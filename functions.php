@@ -36,11 +36,9 @@ function is_child()
                return false; 
 }
 
-// function add_img_short(){
-//    return get_field('add_image');
-//  }
-//  add_shortcode( 'imageinsert', 'add_img_short' );
-// 
-?>
+function add_img_short(){
+   return get_field('add_image');
+ }
+ add_shortcode( 'imageinsert', 'add_img_short' );
 
-<!-- get_field('add_image', get_the_id()); -->
+?>

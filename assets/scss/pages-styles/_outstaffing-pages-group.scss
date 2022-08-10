@@ -43,8 +43,7 @@
    }
 }
 
-.staffing--outstaffing-page{
-   background: url(../img/our-solutions-page/oustaffing-background.webp), no-repeat;
+.staffing--outstaffing{
    background-position: 48% center;
    background-size: cover;
    @media(min-width: $tablet-vertical){
@@ -61,8 +60,8 @@
    }
 }
 
-.staffing--staff-provision-page{
-   background: url(../img/our-solutions-page/staff-provision-background.webp), no-repeat;
+.staffing--staff-provision{
+   // background: url(../img/our-solutions-page/staff-provision-background.webp), no-repeat;
    background-position: 51% center;
    background-size: cover;
    @media(min-width: $tablet-vertical){
@@ -79,11 +78,11 @@
    }
 }
 
-.staffing--staffing-page{
+.staffing--staffing{
    @media(min-width: $tablet-horizontal){
       padding: 60px 0;
    }
-   background: url(../img/our-solutions-page/staffing-background.webp), no-repeat;
+   // background: url(../img/our-solutions-page/staffing-background.webp), no-repeat;
    background-position: 45% center;
    background-size: cover;
    @media(min-width: $tablet-vertical){
@@ -102,8 +101,8 @@
    }
 }
 
-.staffing--temporary-staff-page{
-   background: url(../img/our-solutions-page/temporary-staff-background.webp), no-repeat;
+.staffing--temporary-staff{
+   // background: url(../img/our-solutions-page/temporary-staff-background.webp), no-repeat;
    background-position: 48% center;
    background-size: cover;
    @media(min-width: $tablet-vertical){

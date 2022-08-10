@@ -3,6 +3,11 @@
 <?php
 get_header();
 ?>
+<?php //global variables
+$globalBlocks = new WP_Query(array(
+   'category_name' => 'Reusable blocks'
+));
+?>
 <main class="main">
             <?php
                get_template_part( 'template-parts/main-block');
@@ -51,12 +56,12 @@ get_header();
                   </div>
                   <div class="industries__outer-grid-cell industries__outer-grid-cell--third">
                   <?php
-                     $my_postid = 159;//This is page id or post id
-                     $content_post = get_post($my_postid);
-                     $content = $content_post->post_content;
-                     $content = apply_filters('the_content', $content);
-                     $content = str_replace(']]>', ']]&gt;', $content);
-                     echo $content;
+                     while( $globalBlocks->have_posts()){
+                        $globalBlocks->the_post();
+                        if(get_the_ID() == 159){
+                           the_content();
+                        };
+                     };
                      ?>
                   </div>
                </div>
@@ -65,25 +70,14 @@ get_header();
          <?php
             get_template_part( 'template-parts/choice-links');
          ?>
-         <?php
-
-         // $globalBlocks = new WP_Query(array(
-         //    'category_name' => 'Reusable blocks'
-         // ));
-
-         // while( $globalBlocks->have_posts()){
-         //    $globalBlocks->the_post();
-         //    if(get_the_ID() == 163){
-         //       the_content();
-         //    };
-         // };
-            // $my_postid = 163;//This is page id or post id
-            // $content_post = get_post($my_postid);
-            // $content = $content_post->post_content;
-            // $content = apply_filters('the_content', $content);
-            // $content = str_replace(']]>', ']]&gt;', $content);
-            // echo $content;
-            ?>
+   <?php
+   while( $globalBlocks->have_posts()){
+      $globalBlocks->the_post();
+      if(get_the_ID() == 196){
+         the_content();
+      };
+   };
+   ?>
 </main>
 <?php
 get_footer();
