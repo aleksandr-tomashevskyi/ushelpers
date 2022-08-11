@@ -3,10 +3,12 @@
 $globalBlocks = new WP_Query(array(
    'category_name' => 'Reusable blocks'
 ));
+$choicesLeftArray = get_field('staffing__left-column-content-choice');
 ?>
 <?php
 get_header();
 ?>
+
 <main class="main">
    <?php
       get_template_part( 'template-parts/main-block'); 
@@ -16,7 +18,6 @@ get_header();
          <div class="staffing__columns">
             <div class="staffing__column">
             <?php
-                  $choicesLeftArray = get_field('staffing__left-column-content-choice');
                   if($choicesLeftArray){
                      foreach($choicesLeftArray as $choice){
                         if($choice == 'staffing__paragraph-above-title'){
@@ -41,7 +42,7 @@ get_header();
          </div>
       </div>
    </section>
-   <?php
+   <?php // Free call block
    while( $globalBlocks->have_posts()){
       $globalBlocks->the_post();
       if(get_the_ID() == 196){

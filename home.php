@@ -1,5 +1,9 @@
 <?php /* Template Name: home*/ ?>
-
+<?php //global variables
+$globalBlocks = new WP_Query(array(
+   'category_name' => 'Reusable blocks'
+));
+?>
 <?php
 get_header();
 ?>
@@ -304,9 +308,14 @@ get_header();
             </div>
          </div>
       </section>
-      <?php
-      get_template_part( 'template-parts/free-call');
-      ?>
+      <?php // Free call block
+   while( $globalBlocks->have_posts()){
+      $globalBlocks->the_post();
+      if(get_the_ID() == 196){
+         the_content();
+      };
+   };
+   ?>
 </main>
 <?php
 get_footer();
