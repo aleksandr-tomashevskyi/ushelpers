@@ -4,7 +4,20 @@ function theme_styles(){
    wp_enqueue_style('site_main_style', get_theme_file_uri('/assets/css/styles.min.css'));
 }
 
-add_action('wp_enqueue_scripts', 'theme_styles');
+add_action('wp_enqueue_scripts', 'theme_styles', 99 );
+
+function lateStyles(){
+   wp_enqueue_style('late-styles', get_theme_file_uri('late-styles.css'));
+}
+add_action( 'get_footer', 'lateStyles', 99 );
+
+
+// function qmn_register_my_templates() {
+// 	global $mlwQuizMasterNext;
+// 	$mlwQuizMasterNext->pluginHelper->register_quiz_template( 'USHelpRes design', 'late-styles.css' );
+// }
+// add_action( 'init', 'qmn_register_my_templates' );
+
 
 function theme_scripts(){
    wp_enqueue_script('jquery');

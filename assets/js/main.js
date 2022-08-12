@@ -174,3 +174,21 @@ function parallaxScroll(){
 document.addEventListener("scroll", parallaxScroll)
 
 //    Parallax scroll end
+
+//    Quiz
+
+console.log(document.querySelectorAll('.qmn_quiz_radio'))
+
+document.querySelectorAll('.qmn_quiz_radio').forEach((el)=>{
+   el.setAttribute("onchange", 'quizStateChange(this)');
+})
+
+function quizStateChange(el){
+   el.nextElementSibling.classList.toggle('qsm-input-label--active');
+      console.log("change state registered for ");
+      document.querySelectorAll('.qmn_quiz_radio').forEach((element)=>{
+         if(!element.checked){
+            element.nextElementSibling.classList.remove('qsm-input-label--active');
+         }
+      })
+}

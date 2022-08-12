@@ -303,11 +303,12 @@ body{
 
 
 .main{
+   @include sections-margins;
+
    flex: 1 0 auto;
 }
 
 .main-block{
-   @include sections-margins;
    &__inner-container{
       width: 100%;
       margin: 0 auto;

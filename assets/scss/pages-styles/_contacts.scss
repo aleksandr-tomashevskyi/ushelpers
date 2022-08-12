@@ -1,5 +1,4 @@
 .contacts{
-   @include sections-margins;
    &__columns{
       @media(min-width: $pc-small){
          display: flex;
