@@ -177,12 +177,14 @@ document.addEventListener("scroll", parallaxScroll)
 
 //    Quiz
 
-console.log(document.querySelectorAll('.qmn_quiz_radio'))
+// assigning onclick attribute to all radio buttons
+if(document.querySelectorAll('.qmn_quiz_radio')){
+   document.querySelectorAll('.qmn_quiz_radio').forEach((el)=>{
+      el.setAttribute("onchange", 'quizStateChange(this)');
+   })
+}
 
-document.querySelectorAll('.qmn_quiz_radio').forEach((el)=>{
-   el.setAttribute("onchange", 'quizStateChange(this)');
-})
-
+// toggling style class after state change
 function quizStateChange(el){
    el.nextElementSibling.classList.toggle('qsm-input-label--active');
       console.log("change state registered for ");
@@ -192,3 +194,17 @@ function quizStateChange(el){
          }
       })
 }
+
+// transforming page counter styles
+function pageCountTextTransform(){
+   let pageCountArray = document.querySelectorAll(".pages_count");
+pageCountArray.forEach((el)=>{
+   let foo = el.textContent.replace(' out of ','/');
+   el.textContent = foo;
+   // foo = el;
+   el.previousElementSibling.prepend(el);
+   // el.remove();
+})
+};
+pageCountTextTransform();
+

@@ -8,10 +8,15 @@ const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 
-
-
 function buildStyles() {
   return gulp.src('assets/scss/**/*.scss')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer({cascade:true}))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('assets/css/'))
+};
+function buildLateStyles() {
+  return gulp.src('assets/scss/late-styles/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer({cascade:true}))
     .pipe(rename({suffix: '.min'}))
@@ -29,6 +34,7 @@ exports.buildStyles = buildStyles;
 exports.buildJs = buildJs;
 function watch() {
   gulp.watch('assets/scss/**/*.scss', buildStyles);
+  gulp.watch('assets/scss/late-styles/*.scss', buildLateStyles);
   gulp.watch('./*.php');
   gulp.watch('assets/js/*js');
 };

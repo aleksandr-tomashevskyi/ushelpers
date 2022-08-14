@@ -7,14 +7,13 @@ function theme_styles(){
 add_action('wp_enqueue_scripts', 'theme_styles', 99 );
 
 function lateStyles(){
-   wp_enqueue_style('late-styles', get_theme_file_uri('late-styles.css'));
+   wp_enqueue_style('late-styles', get_theme_file_uri('/assets/css/late-styles.min.css'));
 }
 add_action( 'get_footer', 'lateStyles', 99 );
 
-
 // function qmn_register_my_templates() {
 // 	global $mlwQuizMasterNext;
-// 	$mlwQuizMasterNext->pluginHelper->register_quiz_template( 'USHelpRes design', 'late-styles.css' );
+// 	$mlwQuizMasterNext->pluginHelper->register_quiz_template( 'USHelpRes styles', get_theme_file_uri('/assets/css/late-styles.min.css'));
 // }
 // add_action( 'init', 'qmn_register_my_templates' );
 
@@ -32,6 +31,7 @@ add_action('wp_enqueue_scripts', 'theme_scripts');
 add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'custom-logo' );
+
 
 function is_parent()
 {
