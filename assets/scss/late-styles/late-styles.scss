@@ -1,8 +1,13 @@
 @import '../_vars';
-
 .qsm-quiz-form{
    position: relative;
    z-index: 5;
+}
+.qsm-page{
+   border: solid var(--color-secondary-accent) 2px;
+   border-bottom: none;
+   border-radius: 12px 12px 0 0;
+   padding: 5% 5% 0 5%;
 }
 .qsm-page{
    border: solid var(--color-secondary-accent) 2px;
@@ -24,7 +29,7 @@
 .qsm-input-label{
 display: inline-block;
 margin: 0;
-max-width: 100%;
+// max-width: 100%;
 transition: all 0.3s;
 cursor: pointer;
 }
@@ -161,4 +166,29 @@ flex: 0 0 100%;
       font-size: 24px;
       margin-bottom: 0;
    }
+}
+.quiz_section--contacts-page{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   // flex-direction: column;
+   input{
+      width: 80%;
+      padding: 20px 15px;
+      margin: 10px auto;
+      border-radius: 8px;
+      box-shadow: 1px 1px 5px var(--color-secondary-accent), -1px -1px 5px var(--color-secondary-accent);
+      -webkit-box-shadow: 1px 1px 5px var(--color-secondary-accent), -1px -1px 5px var(--color-secondary-accent);
+   }
+   span{
+      @include p-second-font;
+      color: var(--color-secondary-accent);
+   }
+}
+.qsm-after-message{
+   @include title-second-font;
+   color: var(--color-secondary-accent);
+   grid-column-start: span 2;
+}
+.qsm_contact_div{
+   margin-bottom: 20px;
 }

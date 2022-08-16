@@ -1,0 +1,48 @@
+.quiz-form{
+   &__page-wrapper{
+      border: solid red;
+      // height: 500px;
+      padding: 2%;
+   }
+   &__columns{
+      border: solid #008000;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+   }
+   &__column{
+      border: solid blue;
+   }
+   &__column--pagination{
+      grid-column-start: span 2;
+      display: flex;
+   }
+   &__pagination-button{
+      flex: 1 1 50%;
+   }
+   &__column--choice-column{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+   }
+   &__choice-container{
+      position: relative;
+      border: solid yellow;
+   }
+   &__radio{
+      visibility: hidden;
+      position: absolute;
+      user-select: none;
+      pointer-events: none;
+      margin: 0;
+      padding: 0;
+      width: 0;
+      height: 0;
+   }
+   &__image-container{
+      height: 200px;
+   }
+   &__answer-image{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+   }
+}

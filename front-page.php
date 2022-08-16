@@ -8,6 +8,7 @@ $globalBlocks = new WP_Query(array(
 get_header();
 ?>
      <main class="main">
+   <?php get_template_part( 'template-parts/popup'); ?>
          <section class="main-block">
             <div class="container">
                <div class="main-block__columns">
@@ -23,7 +24,7 @@ get_header();
                      <h1 class="main-block__title">IT'S OUR BUSINESS TO GROW YOURS!</h1>
                      <p class="main-block__description">We help businesses reduce the expense of recruiting and retaining workers, allowing them to concentrate on expansion and growth.</p>
                      <p class="main-block__sub-title">Answer a few quiz questions, and we will find the best staffing solution for you.</p>
-                     <button class="main-block__button main-block__button--orange">REQUEST STAFF VIA QUIZ FORM</button>
+                     <button onclick="showForm()" class="main-block__button main-block__button--orange">REQUEST STAFF VIA QUIZ FORM</button>
                      <button class="main-block__button main-block__button--blue">SCHEDULE A FREE CALL</button>
                   </div>
                </div>

@@ -208,3 +208,32 @@ pageCountArray.forEach((el)=>{
 };
 pageCountTextTransform();
 
+const quizSections = document.querySelectorAll(".quiz_section");
+quizSections[quizSections.length-1].classList.add("quiz_section--contacts-page")
+quizSections[quizSections.length-1].parentElement.classList.add("qsm-page--contacts-page")
+
+console.log(quizSections[quizSections.length-1]);
+
+
+
+//    Popup window
+
+const popupWindow = document.querySelector(".popup-form");
+
+function showForm(){
+   document.querySelector(".popup-form").classList.toggle("popup-form--active");
+   setTimeout(()=>document.querySelector(".popup-form__body").classList.toggle("popup-form__body--active"), 10);
+   //disabling scroll
+   hideShowScroll();
+}
+function hideForm(event){
+   if(!event.target.closest(".popup-form__body")){
+      document.querySelector(".popup-form").classList.toggle("popup-form--active");
+      document.querySelector(".popup-form__body").classList.toggle("popup-form__body--active");
+      //returning scroll
+      hideShowScroll();
+   }
+}
+if(popupWindow){
+   popupWindow.addEventListener("click", hideForm);
+}
