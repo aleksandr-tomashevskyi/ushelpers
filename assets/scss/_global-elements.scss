@@ -100,16 +100,17 @@ body{
 }
 .logo{
    // flex: 0 0 auto;
-   width: 90px;
-   // height: 30px;
+   width: 50px;
+   height: 100%;
    background: transparent;
    z-index: 6;
    @media(min-width: $tablet-vertical){
-      width: 120px;
+      width: 75px;
       // height: 70px;
    }
    img{
       width: 100%;
+      height: 100%;
       object-fit: contain;
    }
 }

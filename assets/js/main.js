@@ -186,11 +186,11 @@ if(document.querySelectorAll('.qmn_quiz_radio')){
 
 // toggling style class after state change
 function quizStateChange(el){
-   el.nextElementSibling.classList.toggle('qsm-input-label--active');
+   el.parentElement.classList.toggle('qmn_image_option--active');
       console.log("change state registered for ");
       document.querySelectorAll('.qmn_quiz_radio').forEach((element)=>{
          if(!element.checked){
-            element.nextElementSibling.classList.remove('qsm-input-label--active');
+            element.parentElement.classList.remove('qmn_image_option--active');
          }
       })
 }

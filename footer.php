@@ -1,7 +1,7 @@
 <footer class="footer">
       <div class="footer__columns container">
          <div class="footer__column footer__column--contacts">
-            <h3 class="footer__column-title">Contacts</h3>
+         <h3 class="footer__column-title"><a class="footer__title-link" href="<?php echo site_url('/contacts') ?>">Contacts</a></h3>
             <ul class="footer__list">
                <li class="footer__list-item">Call or text us by WhatsApp: +1 646 543 59 46</li>
                <li class="footer__list-item">Mail: partnership@staffy.work</li>
@@ -9,23 +9,23 @@
             </ul>
          </div>
          <div class="footer__column footer__column--solutions">
-            <a class="footer__title-link" href="./our-solutions-parent.html"><h3 class="footer__column-title">Solutions</h3></a>
+         <h3 class="footer__column-title"><a class="footer__title-link" href="<?php echo site_url('/our-solutions') ?>">Solutions</a></h3>
             <ul class="footer__list">
-                  <li class="footer__list-item"><a class="footer__list-link" href="./staffing.html">staffing</a></li>
-                  <li class="footer__list-item"><a class="footer__list-link" href="./outstaffing.html">outstaffing</a></li>
-                  <li class="footer__list-item"><a class="footer__list-link" href="./staff-provision.html">staff provision</a></li>
-                  <li class="footer__list-item"><a class="footer__list-link" href="./temporary-staff.html">temporary staff</a></li>
-                  <li class="footer__list-item"><a class="footer__list-link" href="./staff-leasing.html">staff leasing</a></li>
+                  <li class="footer__list-item"><a class="footer__list-link" href="<?php echo site_url('/staffing') ?>">staffing</a></li>
+                  <li class="footer__list-item"><a class="footer__list-link" href="<?php echo site_url('/outstaffing') ?>">outstaffing</a></li>
+                  <li class="footer__list-item"><a class="footer__list-link" href="<?php echo site_url('/staff-provision') ?>">staff provision</a></li>
+                  <li class="footer__list-item"><a class="footer__list-link" href="<?php echo site_url('/temporary-staff') ?>">temporary staff</a></li>
+                  <li class="footer__list-item"><a class="footer__list-link" href="<?php echo site_url('/staff-leasing') ?>">staff leasing</a></li>
             </ul>
          </div>
          <div class="footer__column footer__column--industries">
-            <a class="footer__title-link" href="./industries-parent.html"><h3 class="footer__column-title">Industries</h3></a>
+         <h3 class="footer__column-title"><a class="footer__title-link footer__column-title" href="<?php echo site_url('/industries') ?>">Industries</a></h3>
             <ul class="footer__list">
-                  <li class="footer__list-item"><a class="footer__list-link" href="./warehouse.html">warehouse logistics</a></li>
-                  <li class="footer__list-item"><a class="footer__list-link" href="./trading.html">trading</a></li>
-                  <li class="footer__list-item"><a class="footer__list-link" href="./industrial-production.html">industrial Production</a></li>
-                  <li class="footer__list-item"><a class="footer__list-link" href="./food-production.html">food production</a></li>
-                  <li class="footer__list-item"><a class="footer__list-link" href="./agriculture.html">agriculture</a></li>
+                  <li class="footer__list-item"><a class="footer__list-link" href="<?php echo site_url('/warehouse-logistics') ?>">warehouse logistics</a></li>
+                  <li class="footer__list-item"><a class="footer__list-link" href="<?php echo site_url('/trading') ?>">trading</a></li>
+                  <li class="footer__list-item"><a class="footer__list-link" href="<?php echo site_url('/industrial-production') ?>">industrial Production</a></li>
+                  <li class="footer__list-item"><a class="footer__list-link" href="<?php echo site_url('/food-production') ?>">food production</a></li>
+                  <li class="footer__list-item"><a class="footer__list-link" href="<?php echo site_url('/agriculture') ?>">agriculture</a></li>
             </ul>
          </div>
          <div class="footer__column footer__column--icons">

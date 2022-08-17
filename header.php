@@ -22,26 +22,26 @@
                            <a class="navigation__link" href="#">request talent</a>
                         </li>
                         <li class="navigation__list-item navigation__inner-list-trigger">
-                           <a class="navigation__link" href="./industries-parent.html">industries</a>
+                           <a class="navigation__link" href="<?php echo site_url('/industries') ?>">industries</a>
                            <ul class="navigation__inner-list">
                               <div class="navigation__inner-list-content-wrapper">
-                                 <li class="navigation__list-item navigation__inner-list-item"><a href="./warehouse.html" class="navigation__link navigation__link--inner">Warehouse Logistics</a></li>
-                                 <li class="navigation__list-item navigation__inner-list-item"><a href="./trading.html" class="navigation__link navigation__link--inner">Trading</a></li>
-                                 <li class="navigation__list-item navigation__inner-list-item"><a href="./industrial-production.html" class="navigation__link navigation__link--inner">Industrial Production</a></li>
-                                 <li class="navigation__list-item navigation__inner-list-item"><a href="./food-production.html" class="navigation__link navigation__link--inner">Food Production</a></li>
-                                 <li class="navigation__list-item navigation__inner-list-item"><a href="./agriculture.html" class="navigation__link navigation__link--inner">Agriculture</a></li>
+                                 <li class="navigation__list-item navigation__inner-list-item"><a class="navigation__link navigation__link--inner" href="<?php echo site_url('/warehouse-logistics') ?>">Warehouse Logistics</a></li>
+                                 <li class="navigation__list-item navigation__inner-list-item"><a class="navigation__link navigation__link--inner" href="<?php echo site_url('/trading') ?>">Trading</a></li>
+                                 <li class="navigation__list-item navigation__inner-list-item"><a class="navigation__link navigation__link--inner" href="<?php echo site_url('/industrial-production') ?>">Industrial Production</a></li>
+                                 <li class="navigation__list-item navigation__inner-list-item"><a class="navigation__link navigation__link--inner" href="<?php echo site_url('/food-production') ?>">Food Production</a></li>
+                                 <li class="navigation__list-item navigation__inner-list-item"><a class="navigation__link navigation__link--inner" href="<?php echo site_url('/agriculture') ?>">Agriculture</a></li>
                               </div>
                            </ul>
                         </li>
                         <li class="navigation__list-item navigation__inner-list-trigger">
-                           <a class="navigation__link" href="./our-solutions-parent.html">our solutions</a>
+                           <a class="navigation__link" href="<?php echo site_url('/our-solutions') ?>">our solutions</a>
                            <ul class="navigation__inner-list">
                               <div class="navigation__inner-list-content-wrapper">
-                                 <li class="navigation__list-item navigation__inner-list-item"><a href="./staffing.html" class="navigation__link navigation__link--inner">staffing</a></li>
-                                 <li class="navigation__list-item navigation__inner-list-item"><a href="./outstaffing.html" class="navigation__link navigation__link--inner">outstaffing</a></li>
-                                 <li class="navigation__list-item navigation__inner-list-item"><a href="./staff-provision.html" class="navigation__link navigation__link--inner">staff provision</a></li>
-                                 <li class="navigation__list-item navigation__inner-list-item"><a href="./temporary-staff.html" class="navigation__link navigation__link--inner">temporary staff</a></li>
-                                 <li class="navigation__list-item navigation__inner-list-item"><a href="./staff-leasing.html" class="navigation__link navigation__link--inner">staff leasing</a></li>
+                                 <li class="navigation__list-item navigation__inner-list-item"><a class="navigation__link navigation__link--inner" href="<?php echo site_url('/staffing') ?>">staffing</a></li>
+                                 <li class="navigation__list-item navigation__inner-list-item"><a class="navigation__link navigation__link--inner" href="<?php echo site_url('/outstaffing') ?>" >outstaffing</a></li>
+                                 <li class="navigation__list-item navigation__inner-list-item"><a class="navigation__link navigation__link--inner" href="<?php echo site_url('/staff-provision') ?>">staff provision</a></li>
+                                 <li class="navigation__list-item navigation__inner-list-item"><a class="navigation__link navigation__link--inner" href="<?php echo site_url('/temporary-staff') ?>">temporary staff</a></li>
+                                 <li class="navigation__list-item navigation__inner-list-item"><a class="navigation__link navigation__link--inner" href="<?php echo site_url('/staff-leasing') ?>">staff leasing</a></li>
                               </div>
                            </ul>
                         </li>
@@ -49,10 +49,10 @@
                            <a class="navigation__link" href="#">hiring advice</a>
                         </li>
                         <li class="navigation__list-item">
-                           <a class="navigation__link" href="./about-us.html">about us</a>
+                           <a class="navigation__link" href="<?php echo site_url('/about-us') ?>">about us</a>
                         </li>
                         <li class="navigation__list-item">
-                           <a class="navigation__link" href="./contacts.html">contacts</a>
+                           <a class="navigation__link" href="<?php echo site_url('/contacts') ?>">contacts</a>
                         </li>
                      </ul>
                   </div>
