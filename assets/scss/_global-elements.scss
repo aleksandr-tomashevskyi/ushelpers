@@ -374,12 +374,8 @@ body{
    &__sub-title{
       @include buttons-font;
       color: var(--color-secondary-accent);
-      margin-bottom: 39px;
+      margin-bottom: 20px;
       text-align: center;
-      &:last-child{
-         text-decoration: underline;
-         margin-bottom: 0;
-      }
    }
    &__button{
       @include buttons-font;
@@ -618,7 +614,7 @@ body{
       padding: 50px 0;
    }
    @media(min-width: $pc-large){
-      padding: 100px 0;
+      padding: 60px 0 40px 0;
    }
    &__columns{
       // margin: 120px auto;

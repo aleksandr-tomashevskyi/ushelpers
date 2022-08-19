@@ -3,6 +3,9 @@
 $globalBlocks = new WP_Query(array(
    'category_name' => 'Reusable blocks'
 ));
+$casesSliderContent = new WP_Query(array(
+   'category_name' => 'Cases slides'
+))
 ?>
 <?php
 get_header();
@@ -15,79 +18,79 @@ get_header();
                   <div class="main-block__column main-block__column--index-page">
                      <div class="main-block__image-container">
                         <picture>
-                           <source class="main-block__image" srcset="<?php echo get_theme_file_uri("assets/img/main-block.png")?>" media="(min-width: 1024px)">
-                           <img class="main-block__image" src="<?php echo get_theme_file_uri("assets/img/main-block-mobile.png")?>" alt="image">
+                           <source class="main-block__image" srcset="<?php the_field('home-main__image-mobile-pc');?>" media="(min-width: 1024px)">
+                           <img class="main-block__image" src="<?php the_field('home-main__image-mobile');?>" alt="image">
                         </picture>
                      </div>
                   </div>
                   <div class="main-block__column">
-                     <h1 class="main-block__title">IT'S OUR BUSINESS TO GROW YOURS!</h1>
-                     <p class="main-block__description">We help businesses reduce the expense of recruiting and retaining workers, allowing them to concentrate on expansion and growth.</p>
-                     <p class="main-block__sub-title">Answer a few quiz questions, and we will find the best staffing solution for you.</p>
+                     <h1 class="main-block__title"><?php the_field('home-main__h1_title');?></h1>
+                     <p class="main-block__description"><?php the_field('home-main__text-block-1');?></p>
+                     <p class="main-block__sub-title"><?php the_field('home-main__text-block-2');?></p>
                      <button onclick="showForm()" class="main-block__button main-block__button--orange">REQUEST STAFF VIA QUIZ FORM</button>
                      <button class="main-block__button main-block__button--blue">SCHEDULE A FREE CALL</button>
                   </div>
                </div>
                <div class="main-block__text-block">
-                  <p class="main-block__text-block-plain-text">We are more inclined to massive recruitment.</p>
-                  <p class="main-block__text-block-sub-title">HIRING COURIERS, MOVERS, CREW MEMBERS, and other hourly rate vacancies.</p>
+                  <p class="main-block__text-block-plain-text"><?php the_field('home-main__text-block-3');?></p>
+                  <p class="main-block__text-block-sub-title"><?php the_field('home-main__text-block-4');?></p>
                </div>
             </div>
          </section>
          <section class="fields">
             <div class="container">
-               <h2 class="fields__title">We place skilled professionals across a range of specializations</h2>
-               <p class="fields__description">We've been partnering with the Grocery, Delivery, Retail, Logistics, and inventory companies for more than ten years in CIS countries, the UK, and the US.
+               <h2 class="fields__title"><?php the_field('fields__title');?></h2>
+               <p class="fields__description"><?php the_field('fields__description');?>
                </p>
                <div class="fields__cards-block">
                   <div class="fields__card-container">
                      <div class="fields__card-image-container">
-                        <img class="fields__card-image fields__card-image-initial" src="<?php echo get_theme_file_uri("assets/img/services-icons/service-card-1.png")?>" alt="">
-                        <img class="fields__card-image fields__card-image-hover" src="<?php echo get_theme_file_uri("assets/img/services-icons/service-card-1-hover.jpg")?>" alt="">
+                        <img class="fields__card-image fields__card-image-initial" src="<?php the_field('fields__shown-picture-1');?>" alt="">
+                        <img class="fields__card-image fields__card-image-hover" src="<?php the_field('fields__hidden-picture-1');?>" alt="">
                      </div>
-                     <p class="fields__card-description">Delivery Service</p>
+                     <p class="fields__card-description"><?php the_field('fields__picture-1-title');?></p>
                   </div>
                   <div class="fields__card-container">
                      <div class="fields__card-image-container">
-                        <img class="fields__card-image fields__card-image-initial" src="<?php echo get_theme_file_uri("assets/img/services-icons/service-card-2.png")?>" alt="">
-                        <img class="fields__card-image fields__card-image-hover" src="<?php echo get_theme_file_uri("assets/img/services-icons/service-card-2-hover.jpg")?>" alt="">
+                        <img class="fields__card-image fields__card-image-initial" src="<?php the_field('fields__shown-picture-2');?>" alt="">
+                        <img class="fields__card-image fields__card-image-hover" src="<?php the_field('fields__hidden-picture-2');?>" alt="">
                      </div>
-                     <p class="fields__card-description">Grocery & Food</p>
+                     <p class="fields__card-description"><?php the_field('fields__picture-2-title');?></p>
                   </div>
                   <div class="fields__card-container">
                      <div class="fields__card-image-container">
-                        <img class="fields__card-image fields__card-image-initial" src="<?php echo get_theme_file_uri("assets/img/services-icons/service-card-3.png")?>" alt="">
-                        <img class="fields__card-image fields__card-image-hover" src="<?php echo get_theme_file_uri("assets/img/services-icons/service-card-3-hover.jpg")?>" alt="">
+                        <img class="fields__card-image fields__card-image-initial" src="<?php the_field('fields__shown-picture-3');?>" alt="">
+                        <img class="fields__card-image fields__card-image-hover" src="<?php the_field('fields__hidden-picture-3');?>" alt="">
                      </div>
-                     <p class="fields__card-description">Delivery Aggregators</p>
+                     <p class="fields__card-description"><?php the_field('fields__picture-3-title');?></p>
                   </div>
                   <div class="fields__card-container">
                      <div class="fields__card-image-container">
-                        <img class="fields__card-image fields__card-image-initial" src="<?php echo get_theme_file_uri("assets/img/services-icons/service-card-4.png")?>" alt="">
-                        <img class="fields__card-image fields__card-image-hover" src="<?php echo get_theme_file_uri("assets/img/services-icons/service-card-4-hover.jpg")?>" alt="">
+                        <img class="fields__card-image fields__card-image-initial" src="<?php the_field('fields__shown-picture-4');?>" alt="">
+                        <img class="fields__card-image fields__card-image-hover" src="<?php the_field('fields__hidden-picture-4');?>" alt="">
                      </div>
-                     <p class="fields__card-description">Marketplaces & Online Stores</p>
+                     <p class="fields__card-description"><?php the_field('fields__picture-4-title');?></p>
                   </div>
                   <div class="fields__card-container">
                      <div class="fields__card-image-container">
-                        <img class="fields__card-image fields__card-image-initial" src="<?php echo get_theme_file_uri("assets/img/services-icons/service-card-5.png")?>" alt="">
-                        <img class="fields__card-image fields__card-image-hover" src="<?php echo get_theme_file_uri("assets/img/services-icons/service-card-5-hover.jpg")?>" alt="">
+                        <img class="fields__card-image fields__card-image-initial" src="<?php the_field('fields__shown-picture-5');?>" alt="">
+                        <img class="fields__card-image fields__card-image-hover" src="<?php the_field('fields__hidden-picture-5');?>" alt="">
                      </div>
-                     <p class="fields__card-description">Restaurants & Cafes</p>
+                     <p class="fields__card-description"><?php the_field('fields__picture-5-title');?></p>
                   </div>
                   <div class="fields__card-container">
                      <div class="fields__card-image-container">
-                        <img class="fields__card-image fields__card-image-initial" src="<?php echo get_theme_file_uri("assets/img/services-icons/service-card-6.png")?>" alt="">
-                        <img class="fields__card-image fields__card-image-hover" src="<?php echo get_theme_file_uri("assets/img/services-icons/service-card-6-hover.jpg")?>" alt="">
+                        <img class="fields__card-image fields__card-image-initial" src="<?php the_field('fields__shown-picture-6');?>" alt="">
+                        <img class="fields__card-image fields__card-image-hover" src="<?php the_field('fields__hidden-picture-6');?>" alt="">
                      </div>
-                     <p class="fields__card-description">Promotion Company</p>
+                     <p class="fields__card-description"><?php the_field('fields__picture-6-title');?></p>
                   </div>
                   <div class="fields__card-container">
                      <div class="fields__card-image-container">
-                        <img class="fields__card-image fields__card-image-initial" src="<?php echo get_theme_file_uri("assets/img/services-icons/service-card-7.png")?>" alt="">
-                        <img class="fields__card-image fields__card-image-hover" src="<?php echo get_theme_file_uri("assets/img/services-icons/service-card-7-hover.jpg")?>" alt="">
+                        <img class="fields__card-image fields__card-image-initial" src="<?php the_field('fields__shown-picture-7');?>" alt="">
+                        <img class="fields__card-image fields__card-image-hover" src="<?php the_field('fields__hidden-picture-7');?>" alt="">
                      </div>
-                     <p class="fields__card-description">Construction Companies</p>
+                     <p class="fields__card-description"><?php the_field('fields__picture-7-title');?></p>
                   </div>
                </div>
             <div class="fields__discover-more-container"><a class="fields__discover-more-link" href="#">DISCOVER MORE ABOUT OUR SPECIALISATIONS</a></div>
@@ -99,21 +102,21 @@ get_header();
       ?>
       <section class="getting">
          <div class="container">
-            <h2 class="getting__title">What are you getting with us?</h2>
+            <h2 class="getting__title"><?php the_field('getting__title');?></h2>
             <div class="getting__columns">
                <div class="getting__column">
-                  <h3 class="getting__column-title">1. Safety</h3>
-                  <p class="getting__column-text">We use a security agency to examine each worker's skills, experience, and qualifications. We will be accountable for and control the activity of the offered personnel in times ahead. There's no need to get bothered.
+                  <h3 class="getting__column-title"><?php the_field('getting__column-1-title');?></h3>
+                  <p class="getting__column-text"><?php the_field('getting__column-1-text');?>
                   </p>
                </div>
                <div class="getting__column">
-                  <h3 class="getting__column-title">2. Profit</h3>
-                  <p class="getting__column-text">A private recruitment company handles staff recruitment, training and certification, compliance with migration laws and labor,and staff control, and unleashes organizational, labor and financial resources to acquire only the outcome.
+                  <h3 class="getting__column-title"><?php the_field('getting__column-2-title');?></h3>
+                  <p class="getting__column-text"><?php the_field('getting__column-2-text');?>
                   </p>
                </div>
                <div class="getting__column">
-                  <h3 class="getting__column-title">3. Stability</h3>
-                  <p class="getting__column-text">A decorated manager will oversee each initiative. In the event of a problem, the manager will respond quickly and handle an uncertain issue. We are responsible for the sourced staff under the service agreement.
+                  <h3 class="getting__column-title"><?php the_field('getting__column-3-title');?></h3>
+                  <p class="getting__column-text"><?php the_field('getting__column-3-text');?>
                   </p>
                </div>
             </div>
@@ -124,42 +127,39 @@ get_header();
          <div class="container">
             <h2 class="cases__title">Cases</h2>
             <div class="slider">
-               <div class="slider__slide-container">
+               
+               <?php   
+               while( $casesSliderContent->have_posts()){
+                  $casesSliderContent->the_post();
+                  ?>
+                  <div class="slider__slide-container">
                   <div class="slider__text-block">
-                     <h3 class="slider__title">Case: Getir NL</h3>
-                     <h4 class="slider__sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-                     <p class="slider__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ipsa ipsam officia assumenda odio, nesciunt obcaecati veritatis nulla exercitationem hic suscipit fuga excepturi accusamus inventore dolor autem velit! Consectetur, perferendis.</p>
-                     <button class="slider__button">Lorem, ipsum dolor.</button>
-                     <a class="slider__question-link" href="#">Lorem ipsum dolor sit amet.</a>
-                  </div>
-                  <div class="slider__image-block">
-                     <img class="slider__image" src="<?php echo get_theme_file_uri("assets/img/slide-1.jpg")?>" alt="">
+                     <h3 class="slider__title"><?php the_title();?></h3>
+                     <p class="slider__description"><?php 
+                     $contentFull = explode(' ',get_the_content());
+                     $excerpt = array();
+                     $remainder = array();
+                     $i = 0;
+                     foreach($contentFull as $value){
+                        if($i <= 50){
+                           $excerpt[] = $value;
+                        } else{
+                           $remainder[] = $value;
+                        }
+                        $i++;
+                     };
+                     echo implode(' ' , $excerpt);
+                     ?>
+                     <span class="slider__description-remainder">
+                     <?php
+                     echo implode(' ' , $remainder);
+                     ?>
+                     </span><button onclick="showFullPost(this)" class="slider__readmore-button">...read more</button></p>
                   </div>
                </div>
-               <div class="slider__slide-container">
-                  <div class="slider__text-block">
-                     <h3 class="slider__title">Case: Getir NL</h3>
-                     <h4 class="slider__sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-                     <p class="slider__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ipsa ipsam officia assumenda odio, nesciunt obcaecati veritatis nulla exercitationem hic suscipit fuga excepturi accusamus inventore dolor autem velit! Consectetur, perferendis.</p>
-                     <button class="slider__button">Lorem, ipsum dolor.</button>
-                     <a class="slider__question-link" href="#">Lorem ipsum dolor sit amet.</a>
-                  </div>
-                  <div class="slider__image-block">
-                     <img class="slider__image" src="<?php echo get_theme_file_uri("assets/img/slide-1.jpg")?>" alt="">
-                  </div>
-               </div>
-               <div class="slider__slide-container">
-                  <div class="slider__text-block">
-                     <h3 class="slider__title">Case: Getir NL</h3>
-                     <h4 class="slider__sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-                     <p class="slider__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ipsa ipsam officia assumenda odio, nesciunt obcaecati veritatis nulla exercitationem hic suscipit fuga excepturi accusamus inventore dolor autem velit! Consectetur, perferendis.</p>
-                     <button class="slider__button">Lorem, ipsum dolor.</button>
-                     <a class="slider__question-link" href="#">Lorem ipsum dolor sit amet.</a>
-                  </div>
-                  <div class="slider__image-block">
-                     <img class="slider__image" src="<?php echo get_theme_file_uri("assets/img/slide-1.jpg")?>" alt="">
-                  </div>
-               </div>
+                     <?php   
+                  };
+               ?>
             </div>
          </div>
       </section>

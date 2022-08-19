@@ -16,7 +16,7 @@ jQuery(function($){
       speed: 500,
       variableWidth: true,
       centerMode: true,
-      adaptiveHeight: true
+      adaptiveHeight: false
    });
 })
 
@@ -218,22 +218,36 @@ console.log(quizSections[quizSections.length-1]);
 
 //    Popup window
 
-const popupWindow = document.querySelector(".popup-form");
+const popupWindow = document.querySelector(".popup-window");
 
 function showForm(){
-   document.querySelector(".popup-form").classList.toggle("popup-form--active");
-   setTimeout(()=>document.querySelector(".popup-form__body").classList.toggle("popup-form__body--active"), 10);
+   document.querySelector(".popup-window").classList.toggle("popup-window--active");
+   setTimeout(()=>document.querySelector(".popup-window__body").classList.toggle("popup-window__body--active"), 10);
    //disabling scroll
    hideShowScroll();
 }
 function hideForm(event){
-   if(!event.target.closest(".popup-form__body")){
-      document.querySelector(".popup-form").classList.toggle("popup-form--active");
-      document.querySelector(".popup-form__body").classList.toggle("popup-form__body--active");
+   if(!event.target.closest(".popup-window__body")){
+      document.querySelector(".popup-window").classList.toggle("popup-window--active");
+      document.querySelector(".popup-window__body").classList.toggle("popup-window__body--active");
       //returning scroll
       hideShowScroll();
    }
 }
 if(popupWindow){
    popupWindow.addEventListener("click", hideForm);
+}
+
+//    Posts excerpt control
+
+function showFullPost(target){
+   target.parentElement.getElementsByClassName('slider__description-remainder')[0].classList.toggle('slider__description-remainder--active');
+   if(target.textContent == '...read more'){
+      const newLine = document.createElement('br');
+      target.before(newLine);
+      target.textContent = 'collapse';
+   } else{
+      target.previousElementSibling.remove()
+      target.textContent = '...read more';
+   }
 }

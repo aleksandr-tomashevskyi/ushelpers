@@ -1,4 +1,4 @@
-.popup-form{
+.popup-window{
    display: none;
    justify-content: center;
    align-items: center;
@@ -32,7 +32,7 @@
    }
    &__closing-icon{
       cursor: pointer;
-      &:hover .popup-form__closing-icon-inner{
+      &:hover .popup-window__closing-icon-inner{
          stroke: #D5D5D5;
       }
    }
@@ -45,7 +45,7 @@
       transform: rotateX(180deg) scale(0);
       transform-style: preserve-3d;
       opacity: 0;
-      transition: all ease-in 0.3s;
+      transition: all ease-in 0.5s;
       position: relative;
       height: 100%;
       padding: 3%;
@@ -55,13 +55,13 @@
       backface-visibility: hidden;
    }
 }
-.popup-form--active{
+.popup-window--active{
    display: flex;
 }
-.popup-form__body--active{
+.popup-window__body--active{
    transform: rotateX(0deg) scale(1);
    opacity: 1;
 }
-.popup-form__content--diactivated{
+.popup-window__content--diactivated{
    display: none;
 }
