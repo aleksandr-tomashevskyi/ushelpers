@@ -126,35 +126,35 @@ get_header();
       <section class="cases">
          <div class="container">
             <h2 class="cases__title">Cases</h2>
-            <div class="slider">
+            <div class="cases-slider">
                
                <?php   
                while( $casesSliderContent->have_posts()){
                   $casesSliderContent->the_post();
                   ?>
-                  <div class="slider__slide-container">
-                  <div class="slider__text-block">
-                     <h3 class="slider__title"><?php the_title();?></h3>
-                     <p class="slider__description"><?php 
-                     $contentFull = explode(' ',get_the_content());
+                  <div class="cases-slider__slide-container">
+                  <div class="cases-slider__text-block">
+                     <h3 class="cases-slider__title"><?php the_title();?></h3>
+                     <p class="cases-slider__description"><?php 
+                     $contentFull = explode(' ',get_the_content()); //separating long string into array of words
                      $excerpt = array();
                      $remainder = array();
                      $i = 0;
                      foreach($contentFull as $value){
                         if($i <= 50){
-                           $excerpt[] = $value;
+                           $excerpt[] = $value; //writing first 50 word into this array
                         } else{
-                           $remainder[] = $value;
+                           $remainder[] = $value; //all the rest words come here
                         }
                         $i++;
                      };
-                     echo implode(' ' , $excerpt);
+                     echo implode(' ' , $excerpt); //assembling 50 words array back into single string
                      ?>
-                     <span class="slider__description-remainder">
+                     <span class="cases-slider__description-remainder">
                      <?php
-                     echo implode(' ' , $remainder);
+                     echo implode(' ' , $remainder); //assembling remaind array back into single string
                      ?>
-                     </span><button onclick="showFullPost(this)" class="slider__readmore-button">...read more</button></p>
+                     </span><button onclick="showFullPost(this)" class="cases-slider__readmore-button">...read more</button></p>
                   </div>
                </div>
                      <?php   
@@ -257,37 +257,25 @@ get_header();
       <section class="our-partners">
          <div class="container">
             <h2 class="our-partners__title">Our partners</h2>
-            <div class="our-partners__columns">
-               <div class="our-partners__column">
+            <div class="our-partners-slider">
                   <div class="our-partners__image-container">
                      <img class="our-partners__image" src="<?php echo get_theme_file_uri("assets/img/our-partners/logo_1.png")?>" alt="image">
                   </div>
-               </div>
-               <div class="our-partners__column">
                   <div class="our-partners__image-container">
                      <img class="our-partners__image" src="<?php echo get_theme_file_uri("assets/img/our-partners/logo_2.png")?>" alt="image">
                   </div>
-               </div>
-               <div class="our-partners__column">
                   <div class="our-partners__image-container">
                      <img class="our-partners__image" src="<?php echo get_theme_file_uri("assets/img/our-partners/logo_3.png")?>" alt="image">
                   </div>
-               </div>
-               <div class="our-partners__column">
                   <div class="our-partners__image-container">
                      <img class="our-partners__image" src="<?php echo get_theme_file_uri("assets/img/our-partners/logo_4.png")?>" alt="image">
                   </div>
-               </div>
-               <div class="our-partners__column">
                   <div class="our-partners__image-container">
                      <img class="our-partners__image" src="<?php echo get_theme_file_uri("assets/img/our-partners/logo_5.png")?>" alt="image">
                   </div>
-               </div>
-               <div class="our-partners__column">
                   <div class="our-partners__image-container">
                      <img class="our-partners__image" src="<?php echo get_theme_file_uri("assets/img/our-partners/logo_6.png")?>" alt="image">
                   </div>
-               </div>
             </div>
          </div>
       </section>

@@ -11,12 +11,38 @@ let windowScrollValue;
 
 //    Slick slider start
 jQuery(function($){
-   $('.slider').slick({
+   $('.cases-slider').slick({
       arrows: true,
       speed: 500,
       variableWidth: true,
       centerMode: true,
       adaptiveHeight: false
+   });
+   $('.our-partners-slider').slick({
+      dots: true,
+      infinite: true,
+      arrows: false,
+      speed: 500,
+      centerMode: true,
+      adaptiveHeight: false,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      slidesToShow: 4,
+      responsive: [
+         {
+            breakpoint: 769,
+            settings:{
+               slidesToShow: 3,
+            }
+         },
+         {
+            breakpoint: 480,
+            settings:{
+               slidesToShow: 1,
+            }
+         }
+      ],
    });
 })
 
@@ -241,7 +267,7 @@ if(popupWindow){
 //    Posts excerpt control
 
 function showFullPost(target){
-   target.parentElement.getElementsByClassName('slider__description-remainder')[0].classList.toggle('slider__description-remainder--active');
+   target.parentElement.getElementsByClassName('cases-slider__description-remainder')[0].classList.toggle('cases-slider__description-remainder--active');
    if(target.textContent == '...read more'){
       const newLine = document.createElement('br');
       target.before(newLine);
