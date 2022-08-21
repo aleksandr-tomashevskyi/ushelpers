@@ -172,35 +172,35 @@ get_header();
                      <h3 class="solutions__card-title">Staffing</h3>
                      <p class="solutions__card-description">We ensure total secrecy throughout all phases of collaboration and the engagement of skilled professionals that will satisfy all of our clients' needs.</p>
                   </div>
-                  <div class="solutions__card-link-container"><a class="solutions__card-link" href="#">read more</a></div>
+                  <div class="solutions__card-link-container"><a class="solutions__card-link" href="<?php echo get_page_link(236) ?>">read more</a></div>
                </div>
                <div class="solutions__card-container">
                   <div class="solutions__card-text-container">
                      <h3 class="solutions__card-title">Outstaffing</h3>
                      <p class="solutions__card-description">The company hires only about 1/3 of all the workers. This is the core structure that establishes a company's image.</p>
                   </div>
-                  <div class="solutions__card-link-container"><a class="solutions__card-link" href="#">read more</a></div>
+                  <div class="solutions__card-link-container"><a class="solutions__card-link" href="<?php echo get_page_link(200) ?>">read more</a></div>
                </div>
                <div class="solutions__card-container">
                   <div class="solutions__card-text-container">
                      <h3 class="solutions__card-title">Staff Provision</h3>
                      <p class="solutions__card-description">We are an expert in our industry and can help you with your staffing problems irrespective of your line of business.</p>
                   </div>
-                  <div class="solutions__card-link-container"><a class="solutions__card-link" href="#">read more</a></div>
+                  <div class="solutions__card-link-container"><a class="solutions__card-link" href="<?php echo get_page_link(229) ?>">read more</a></div>
                </div>
                <div class="solutions__card-container">
                   <div class="solutions__card-text-container">
                      <h3 class="solutions__card-title">Temporary Staff</h3>
                      <p class="solutions__card-description">Our temporary staffing solution has a lot of expertise and has been there from the beginning of this trend. Our approach revolves around the ideals of quality, safety, and efficiency.</p>
                   </div>
-                  <div class="solutions__card-link-container"><a class="solutions__card-link" href="#">read more</a></div>
+                  <div class="solutions__card-link-container"><a class="solutions__card-link" href="<?php echo get_page_link(234) ?>">read more</a></div>
                </div>
                <div class="solutions__card-container">
                   <div class="solutions__card-text-container">
                      <h3 class="solutions__card-title">Leasing staff </h3>
                      <p class="solutions__card-description">To complete these jobs effectively, the company should collaborate closely with its managers, irrespective of their levels of management. The quality of the leadership is critical to its effectiveness.</p>
                   </div>
-                  <div class="solutions__card-link-container"><a class="solutions__card-link" href="#">read more</a></div>
+                  <div class="solutions__card-link-container"><a class="solutions__card-link" href="<?php echo get_page_link(253) ?>">read more</a></div>
                </div>
             </div>
          </div>

@@ -16,7 +16,7 @@
       </a>
    </div>
    <div class="four-columns-grid__grid-cell four-columns-grid__grid-cell--third">
-      <a class="four-columns-grid__cell-link" href="<?php echo get_page_link(get_field('four-grid__link-id-third')); ?>">
+      <a class="four-columns-grid__cell-link" href="<?php echo get_page_link(get_field('four-grid__link-id-third')); ?>"> 
       <h3 class="four-columns-grid__cell-title"><?php the_field('four-grid__third-cell-title');?></h3>
       <p class="four-columns-grid__read-more">Click to read more</p>
       <div class="four-columns-grid__cell-image-container">
