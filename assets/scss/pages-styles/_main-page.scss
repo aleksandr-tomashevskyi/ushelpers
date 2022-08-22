@@ -339,6 +339,7 @@
    &__title{
       @include title-second-font;
       color: var(--color-secondary-accent);
+      text-align: center;
    }
    &__cards{
       margin-top: 50px;
