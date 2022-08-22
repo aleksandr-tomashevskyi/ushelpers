@@ -106,7 +106,7 @@ get_header();
             <div class="getting__columns">
                <div class="getting__column">
                   <h3 class="getting__column-title"><?php the_field('getting__column-1-title');?></h3>
-                  <p class="getting__column-text"><?php the_field('getting__column-1-text');?>
+                  <p class="getting__column-text"><?php  the_field('getting__column-1-text');?>
                   </p>
                </div>
                <div class="getting__column">
@@ -127,7 +127,6 @@ get_header();
          <div class="container">
             <h2 class="cases__title">Cases</h2>
             <div class="cases-slider">
-               
                <?php   
                while( $casesSliderContent->have_posts()){
                   $casesSliderContent->the_post();
@@ -157,12 +156,14 @@ get_header();
                      </span><button onclick="showFullPost(this)" class="cases-slider__readmore-button">...read more</button></p>
                   </div>
                </div>
-                     <?php   
-                  };
-               ?>
+                     <?php }; ?>
             </div>
          </div>
       </section>
+
+   <?php while(have_posts()){ // returning back wordpress's ability to read database for the current page instead of the global variable I used above to show cases slides
+      the_post();
+   } ?>
       <section class="solutions">
          <div class="container">
             <h2 class="solutions__title"><?php the_field('solutions__title');?></h2>
@@ -236,9 +237,9 @@ get_header();
          <div class="container__inner">
             <div class="a-week__columns">
                <div class="a-week__column">
-                  <h2 class="a-week__title">HOW LONG DOES IT TAKE FOR US TO SOURCE CANDIDATES?</h2>
-                  <h4 class="a-week__shout">A WEEK!</h4>
-                  <p class="a-week__description">We choose relevant candidates and interview them to learn their personality and details, so you can easily see who matches your criteria to move forward.</p>
+                  <h2 class="a-week__title"><?php the_field('a-week__title');?></h2>
+                  <h4 class="a-week__shout"><?php the_field('a-week__shout');?></h4>
+                  <p class="a-week__description"><?php the_field('a-week__description');?></p>
                   <button class="a-week__button">START A FREE WEEK TRIAL!</button>
                </div>
                <div class="a-week__column">
