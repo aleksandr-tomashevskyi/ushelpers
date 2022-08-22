@@ -207,27 +207,27 @@ get_header();
       </section>
       <section class="benefits">
          <div class="container">
-            <h2 class="benefits__title">Also, you'll enjoy the following benefits:</h2>
+            <h2 class="benefits__title"><?php the_field('benefits__title');?></h2>
             <div class="benefits__columns">
                <div class="benefits__column">
-                  <img class="benefits__column-icon" src="<?php echo get_theme_file_uri("assets/img/benefits-icons/benefit-1.png")?>" alt="image">
-                  <h3 class="benefits__column-title">Staff Recruitment</h3>
-                  <p class="benefits__column-description">We'll be engaged in selecting personnel, observing all your conditions and wishes for the qualifications of future employees.</p>
+                  <img class="benefits__column-icon" src="<?php the_field('benefits__column-icon-1');?>" alt="image">
+                  <h3 class="benefits__column-title"><?php the_field('benefits__column-title-1');?></h3>
+                  <p class="benefits__column-description"><?php the_field('benefits__column-description-1');?></p>
                </div>
                <div class="benefits__column">
-                  <img class="benefits__column-icon" src="<?php echo get_theme_file_uri("assets/img/benefits-icons/benefit-2.png")?>" alt="image">
-                  <h3 class="benefits__column-title">Education of Staff</h3>
-                  <p class="benefits__column-description">We provide training for employees and the development of relevant experience.</p>
+                  <img class="benefits__column-icon" src="<?php the_field('benefits__column-icon-2');?>" alt="image">
+                  <h3 class="benefits__column-title"><?php the_field('benefits__column-title-2');?></h3>
+                  <p class="benefits__column-description"><?php the_field('benefits__column-description-2');?></p>
                </div>
                <div class="benefits__column">
-                  <img class="benefits__column-icon" src="<?php echo get_theme_file_uri("assets/img/benefits-icons/benefit-3.png")?>" alt="image">
-                  <h3 class="benefits__column-title">Quality Control</h3>
-                  <p class="benefits__column-description">We monitor the quality of work carried out by our employees and bear full responsibility for them.</p>
+                  <img class="benefits__column-icon" src="<?php the_field('benefits__column-icon-3');?>" alt="image">
+                  <h3 class="benefits__column-title"><?php the_field('benefits__column-title-3');?></h3>
+                  <p class="benefits__column-description"><?php the_field('benefits__column-description-3');?></p>
                </div>
                <div class="benefits__column">
-                  <img class="benefits__column-icon" src="<?php echo get_theme_file_uri("assets/img/benefits-icons/benefit-4.png")?>" alt="image">
-                  <h3 class="benefits__column-title">Salary Payment</h3>
-                  <p class="benefits__column-description">All payments to staff, including bonuses, social benefits, and tax payments, are entirely on our shoulders.</p>
+                  <img class="benefits__column-icon" src="<?php the_field('benefits__column-icon-4');?>" alt="image">
+                  <h3 class="benefits__column-title"><?php the_field('benefits__column-title-4');?></h3>
+                  <p class="benefits__column-description"><?php the_field('benefits__column-description-4');?></p>
                </div>
             </div>
          </div>
