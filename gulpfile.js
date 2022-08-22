@@ -38,4 +38,4 @@ function watch() {
   gulp.watch('./*.php');
   gulp.watch('assets/js/*js');
 };
-exports.default = parallel(buildJs, watch);
+exports.default = parallel(buildJs, buildStyles, watch);

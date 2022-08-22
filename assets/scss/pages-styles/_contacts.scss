@@ -1,12 +1,4 @@
 .contacts{
-   &__columns{
-      @media(min-width: $pc-small){
-         display: flex;
-      }
-   }
-   &__column{
-      flex: 0 0 50%;
-   }
    &__block-wrapper{
       background: url(../img/contacts.png) no-repeat;
       background-size: contain;
@@ -19,6 +11,16 @@
       }
       @media(min-width: $tablet-horizontal){
          height: 300px;
+      }
+   }
+   &__page-title{
+      margin: 10px auto;
+      text-transform: uppercase;
+      @include title-second-font;
+      color: var(--color-secondary-accent);
+      text-align: center;
+      @media(min-width: $tablet-vertical){
+         margin: 20px auto;
       }
    }
    &__text-container{
@@ -38,6 +40,14 @@
       }
       @media(min-width: $pc-large){
          width: 350px;
+      }
+   }
+   &__image-contaner{
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      @media(min-width: $tablet-horizontal){
+      margin: 0 auto;
+      width: 80%;
       }
    }
    &__title{

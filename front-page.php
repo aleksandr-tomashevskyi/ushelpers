@@ -93,7 +93,7 @@ get_header();
                      <p class="fields__card-description"><?php the_field('fields__picture-7-title');?></p>
                   </div>
                </div>
-            <div class="fields__discover-more-container"><a class="fields__discover-more-link" href="#">DISCOVER MORE ABOUT OUR SPECIALISATIONS</a></div>
+            <div class="fields__discover-more-container"><a class="fields__discover-more-link" href="<?php echo get_page_link(24) ?>">DISCOVER MORE ABOUT OUR SPECIALISATIONS</a></div>
             </div>
          </div>
       </section>
@@ -120,7 +120,7 @@ get_header();
                   </p>
                </div>
             </div>
-            <a href="#"><div class="getting__read-more-link">Read more about us</div></a>
+            <a href="<?php echo get_page_link(263) ?>"><div class="getting__read-more-link">Read more about us</div></a>
          </div>
       </section>
       <section class="cases">

@@ -232,19 +232,21 @@ pageCountArray.forEach((el)=>{
    // el.remove();
 })
 };
-pageCountTextTransform();
 
-const quizSections = document.querySelectorAll(".quiz_section");
-quizSections[quizSections.length-1].classList.add("quiz_section--contacts-page")
-quizSections[quizSections.length-1].parentElement.classList.add("qsm-page--contacts-page")
-
-console.log(quizSections[quizSections.length-1]);
-
-
+if(document.querySelector('.quiz_section')){
+   pageCountTextTransform();
+   const quizSections = document.querySelectorAll(".quiz_section");
+quizSections[quizSections.length-1].classList.add("quiz_section--contacts-page");
+quizSections[quizSections.length-1].parentElement.classList.add("qsm-page--contacts-page");
+}
 
 //    Popup window
 
-const popupWindow = document.querySelector(".popup-window");
+if(document.querySelector('.popup-window')){
+   const popupWindow = document.querySelector(".popup-window");
+   popupWindow.addEventListener("click", hideForm);
+
+}
 
 function showForm(){
    document.querySelector(".popup-window").classList.toggle("popup-window--active");
@@ -259,9 +261,6 @@ function hideForm(event){
       //returning scroll
       hideShowScroll();
    }
-}
-if(popupWindow){
-   popupWindow.addEventListener("click", hideForm);
 }
 
 //    Posts excerpt control

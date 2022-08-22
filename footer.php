@@ -3,9 +3,9 @@
          <div class="footer__column footer__column--contacts">
          <h3 class="footer__column-title"><a class="footer__title-link" href="<?php echo site_url('/contacts') ?>">Contacts</a></h3>
             <ul class="footer__list">
-               <li class="footer__list-item">Call or text us by WhatsApp: +1 646 543 59 46</li>
-               <li class="footer__list-item">Mail: partnership@staffy.work</li>
-               <li class="footer__list-item">Office address: 80 Broad Street, 5th floor, PMB #3135, New York, - 10004</li>
+               <li class="footer__list-item">Call or text us by WhatsApp: +1 646 543 5946</li>
+               <li class="footer__list-item">Mail: partnership@helpresource.us</li>
+               <li class="footer__list-item">Office address: 80 Broad Street, 5th floor, New York, 10004</li>
             </ul>
          </div>
          <div class="footer__column footer__column--solutions">
@@ -30,7 +30,7 @@
          </div>
          <div class="footer__column footer__column--icons">
             <a class="footer__icon-link footer__icon-link--instagram" href="#"><img class="footer__icon-image footer__icon-image--instagram" src="<?php echo get_theme_file_uri("assets/icons/instagram.svg")?>" alt="image"></a>
-            <a class="footer__icon-link footer__icon-link--linkedin" href="#"><img class="footer__icon-image footer__icon-image--linkedin" src="<?php echo get_theme_file_uri("assets/icons/linkedin.svg")?>" alt="image"></a>
+            <a class="footer__icon-link footer__icon-link--linkedin" href="https://www.linkedin.com/company/helpresource/mycompany/?viewAsMember=true"><img class="footer__icon-image footer__icon-image--linkedin" src="<?php echo get_theme_file_uri("assets/icons/linkedin.svg")?>" alt="image"></a>
          </div>
       </div>
    </footer>
