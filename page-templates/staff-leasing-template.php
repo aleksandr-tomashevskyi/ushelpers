@@ -19,7 +19,7 @@ get_header();
             <div class="staff-leasing__column staff-leasing__column--left">
                <div class="staff-leasing__full-width-container">
                   <div class="container-for-full-width">
-                     <h2 class="staff-leasing__title"><?php the_field('staff-leasing__title')?></h2>;
+                     <h2 class="staff-leasing__title"><?php the_field('staff-leasing__title');?></h2>
                   </div>
                </div>
                <p class="staff-leasing__article"><?php the_field('staff-leasing__article-1')?></p>

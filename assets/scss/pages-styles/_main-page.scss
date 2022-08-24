@@ -226,12 +226,10 @@
    &__description{
       @include p-second-font;
       color: var(--color-secondary-accent);
-      font-size: calc(8px + (16 - 8)*((100vw - 320px) / (1920 - 320))); //16px to 8px
       line-height: 1.2em;
       margin-bottom: 1em;
       @media(min-width: $tablet-vertical){
          margin-bottom: 1em;
-         line-height: 1.5em;
       }
    }
    &__description-remainder{
@@ -247,7 +245,7 @@
       }
    }
    &__description-remainder--active{
-      font-size: inherit;
+      @include p-second-font;
       line-height: inherit;
       display: inline;
       visibility: visible;
