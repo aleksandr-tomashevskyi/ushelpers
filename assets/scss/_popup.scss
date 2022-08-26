@@ -18,6 +18,9 @@
          width: 80vw;
       }
       @media(min-width: $tablet-horizontal){
+         width: 85vw;
+      }
+      @media(min-width: $pc-small){
          width: 80vw;
       }
       @media(min-width: $pc-small){
