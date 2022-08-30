@@ -154,14 +154,12 @@ get_header();
                      </span><button onclick="showFullPost(this)" class="cases-slider__readmore-button">...read more</button></p>
                   </div>
                </div>
-                     <?php }; ?>
+                     <?php }; 
+                     wp_reset_postdata();
+                     ?>
             </div>
          </div>
       </section>
-
-   <?php while(have_posts()){ // returning back wordpress's ability to read database for the current page instead of the global variable I used above to show cases slides
-      the_post();
-   } ?>
       <section class="solutions">
          <div class="container">
             <h2 class="solutions__title"><?php the_field('solutions__title');?></h2>

@@ -62,6 +62,7 @@ $globalBlocks = new WP_Query(array(
                            the_content();
                         };
                      };
+                     wp_reset_postdata();
                      ?>
                   </div>
                </div>

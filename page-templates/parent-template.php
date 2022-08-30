@@ -1,9 +1,4 @@
 <?php /* Template Name: parent-template */ ?>
-<?php //global variables
-$globalBlocks = new WP_Query(array(
-   'category_name' => 'Reusable blocks'
-));
-?>
 <?php
 get_header();
 ?>
