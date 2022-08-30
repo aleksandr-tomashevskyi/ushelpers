@@ -61,4 +61,16 @@ function add_img_short(){
    return 50;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function cases_post_types(){
+   register_post_type('cases', array(
+      'public' => true,
+      'labels' => array(
+         'name' => 'Cases'
+      ),
+      'menu_icon' => 'dashicons-format-quote'
+   ));
+};
+
+add_action('init', 'cases_post_types')
 ?>
