@@ -2,7 +2,7 @@
 <?php //global variables
 
 $casesSliderContent = new WP_Query(array(
-   'category_name' => 'Cases slides'
+   'post_type' => 'cases'
 ))
 ?>
 <?php

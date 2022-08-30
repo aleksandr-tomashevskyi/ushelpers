@@ -66,7 +66,11 @@ function cases_post_types(){
    register_post_type('cases', array(
       'public' => true,
       'labels' => array(
-         'name' => 'Cases'
+         'name' => 'Cases',
+         'add_new_item' => 'Add New Case',
+         'edit_item' => 'Edit Case',
+         'all_items' => 'All Cases',
+         'singular_name' => 'Cases'
       ),
       'menu_icon' => 'dashicons-format-quote'
    ));
