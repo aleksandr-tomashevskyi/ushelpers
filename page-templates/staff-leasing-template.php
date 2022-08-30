@@ -1,10 +1,5 @@
 <?php /* Template Name: staff-leasing-template */ ?>
 
-<?php //global variables
-$globalBlocks = new WP_Query(array(
-   'category_name' => 'Reusable blocks'
-));
-?>
 <?php
 get_header();
 ?>
@@ -62,14 +57,7 @@ get_header();
          </div>
       </section>
    </section>
-   <?php // Free call block
-   while( $globalBlocks->have_posts()){
-      $globalBlocks->the_post();
-      if(get_the_ID() == 196){
-         the_content();
-      };
-   };
-   ?>
+   <?php get_template_part( 'template-parts/free-call'); ?>
 </main>
 
 <?php

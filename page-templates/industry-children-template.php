@@ -70,14 +70,6 @@ $globalBlocks = new WP_Query(array(
          <?php
             get_template_part( 'template-parts/choice-links');
          ?>
-   <?php
-   while( $globalBlocks->have_posts()){
-      $globalBlocks->the_post();
-      if(get_the_ID() == 196){
-         the_content();
-      };
-   };
-   ?>
 </main>
 <?php
 get_footer();
