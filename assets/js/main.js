@@ -197,7 +197,7 @@ function parallaxScroll(){
    })
 }
 
-document.addEventListener("scroll", parallaxScroll)
+document.addEventListener("scroll", parallaxScroll, {passive: true})
 
 //    Parallax scroll end
 
