@@ -17,7 +17,6 @@ get_header();
       <div class="container">
          <div class="industries__outer-grid">
             <div class="industries__outer-grid-cell industries__outer-grid-cell--first">
-               <h2 class="industries__title">We provide employees of the following specialities:</h2>
                <?php if(get_field('list-of-specialties__choice')){
                         foreach(get_field('list-of-specialties__choice') as $choice){
                            if($choice == "list-of-specialties__title"){
@@ -55,10 +54,11 @@ get_header();
             <?php
                   if($choicesLeftArray){
                      foreach($choicesLeftArray as $choice){
-                        if($choice == 'staffing__paragraph-above-title'){
-                           echo '<p class="staffing__article">', the_field($choice), '</p>';
-                        } else{
+                        if($choice == 'staffing__title'){
                            echo '<h2 class="staffing__title">', the_field($choice), '</h2>';
+                        } 
+                        else{
+                           echo '<p class="staffing__article">', the_field($choice), '</p>';
                         }
                      }
                   }
