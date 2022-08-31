@@ -1,6 +1,7 @@
 <?php /* Template Name: solutions-children-template */ ?>
 <?php //global variables
 $choicesLeftArray = get_field('staffing__left-column-content-choice');
+$choicesRightArray = get_field('staffing__right-column-content-choice');
 ?>
 <?php
 get_header();
@@ -28,7 +29,6 @@ get_header();
             </div>
             <div class="staffing__column">
             <?php
-                  $choicesRightArray = get_field('staffing__right-column-content-choice');
                   if($choicesRightArray){
                      foreach($choicesRightArray as $choice){
                         echo '<p class="staffing__article">', the_field($choice), '</p>';
