@@ -15,7 +15,7 @@ get_header();
    ?>
    <section class="industries">
       <div class="container">
-         <div class="industries__outer-grid">
+         <div class="industries__outer-grid industries__outer-grid--<?php echo str_replace(" ","-", strtolower(get_the_title()));?>">
             <div class="industries__outer-grid-cell industries__outer-grid-cell--first">
                <?php if(get_field('list-of-specialties__choice')){
                         foreach(get_field('list-of-specialties__choice') as $choice){
@@ -41,7 +41,7 @@ get_header();
             </div>
             <div class="industries__outer-grid-cell industries__outer-grid-cell--second">
                <div class="industries__image-container">
-                  <img class="industries__image" src="" alt="">
+                  <img class="industries__image" src="<?php the_field('list-of-specialties__image') ?>" alt="">
             </div>
             </div>
          </div>
