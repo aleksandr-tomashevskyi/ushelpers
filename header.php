@@ -19,7 +19,7 @@
                   <div class="navigation__body">
                      <ul class="navigation__list">
                         <li class="navigation__list-item">
-                           <a class="navigation__link" href="#">request talent</a>
+                           <a class="navigation__link" href="<?php echo site_url('/hiring') ?>">hiring</a>
                         </li>
                         <li class="navigation__list-item navigation__inner-list-trigger">
                            <a class="navigation__link" href="<?php echo site_url('/industries') ?>">industries</a>
