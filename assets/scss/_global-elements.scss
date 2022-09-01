@@ -339,6 +339,12 @@ body{
          column-gap: 40px;
       }
    }
+   &__columns--hiring{
+      @media(min-width: $tablet-horizontal){
+         flex-direction: row-reverse;
+         column-gap: 10px;
+      }
+   }
    &__column{
       display: flex;
       flex-direction: column;
@@ -355,6 +361,12 @@ body{
    }
    &__column--temporary-staff{
       flex: 0 0 48%;
+   }
+   &__column--hiring{
+      flex: 0 0 48%;
+      @media(min-width: $pc-large){
+         flex: 0 0 55%;
+      }
    }
    &__description{
       @include p-first-font;
