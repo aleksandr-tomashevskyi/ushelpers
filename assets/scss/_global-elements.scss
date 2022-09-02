@@ -100,12 +100,12 @@ body{
 }
 .logo{
    // flex: 0 0 auto;
-   width: 50px;
+   width: 70px;
    height: 100%;
    background: transparent;
    z-index: 6;
    @media(min-width: $tablet-vertical){
-      width: 75px;
+      width: 100px;
       // height: 70px;
    }
    img{
