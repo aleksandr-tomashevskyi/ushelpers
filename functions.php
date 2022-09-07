@@ -76,5 +76,5 @@ function cases_post_types(){
    ));
 };
 
-add_action('init', 'cases_post_types')
+add_action('init', 'cases_post_types');
 ?>

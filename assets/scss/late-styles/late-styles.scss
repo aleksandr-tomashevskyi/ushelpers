@@ -213,16 +213,21 @@
    @media(min-width: $tablet-horizontal){
       grid-column-start: span 2;
    }
+   margin-bottom: 30px;
+   padding-bottom: 0;
 }
 .qmn_results_page{
    width: 100%;
-   padding: 30px 0;
+   padding: 80px 0;
    border: solid var(--color-secondary-accent) 2px;
    border-radius: 12px;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   @media(min-width: $pc-large){
+   padding:120px 0;
+   }
 }
 .quiz-result-page__content-wrapper{
    width: 100%;
@@ -259,4 +264,15 @@
 .quiz-result-page-title__lower-segment{
    padding: 15px;
    border: solid var(--color-secondary-accent) 2px;
+}
+.qsm-quiz-container{
+   position: relative;
+}
+#mlw_error_message{
+   color: red;
+   padding: 0 0 15px 15px;
+   font-size: 16px;
+}
+#mlw_error_message_bottom{
+   display: none;
 }
