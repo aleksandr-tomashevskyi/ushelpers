@@ -77,4 +77,11 @@ function cases_post_types(){
 };
 
 add_action('init', 'cases_post_types');
+
+add_filter('ai1wm_exclude_content_from_export', 'ingoreCertainFiles');
+
+function ignoreCertainFiles($exclude_filters){
+   $exclude_filters[] = 'themes/ushelpres/node_modules';
+   return $exclude_filters;
+}
 ?>
