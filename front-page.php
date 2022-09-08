@@ -95,9 +95,6 @@ get_header();
             </div>
          </div>
       </section>
-      <?php
-      get_template_part( 'template-parts/parallax');
-      ?>
       <section class="getting">
          <div class="container">
             <h2 class="getting__title"><?php the_field('getting__title');?></h2>
@@ -240,17 +237,12 @@ get_header();
                </div>
                <div class="a-week__column">
                   <div class="a-week__image-container">
-                     <img class="a-week__image" src="<?php echo get_theme_file_uri("assets/img/a-week.png")?>" alt="image">
+                     <img class="a-week__image" src="<?php echo get_theme_file_uri("assets/img/a-week-2.png")?>" alt="image">
                   </div>
                </div>
             </div>
          </div>
       </section>
-
-      <?php
-      get_template_part( 'template-parts/parallax');
-      ?>
-   
       <section class="our-partners">
          <div class="container">
             <h2 class="our-partners__title">Our partners</h2>

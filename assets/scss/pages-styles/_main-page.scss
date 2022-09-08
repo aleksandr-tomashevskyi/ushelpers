@@ -439,7 +439,11 @@
 .a-week{
    @include sections-margins;
    &__columns{
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
       @media(min-width: $tablet-horizontal){
+         row-gap: 0px;
          display: flex;
          column-gap: 60px;
       }
@@ -467,13 +471,14 @@
          margin-bottom: 30px;
       }
       @media(min-width: $tablet-horizontal){
-         margin-bottom: 50px;
-         font-size: 100px;
+         margin-bottom: 40px;
+         font-size: 90px;
       }
    }
    &__description{
       @include p-first-font;
       color: var(--color-secondary-accent);
+      text-align: center;
    }
    &__button{
       @include buttons-font;
@@ -499,7 +504,10 @@
 }
 
 .our-partners{
-   @include sections-margins;
+   margin-top: 10px;
+   @media(min-width: $tablet-horizontal){
+      @include sections-margins;
+   }
    &__title{
       @include title-second-font;
       color: var(--color-primary-accent);
@@ -527,6 +535,7 @@
 .our-partners-slider{
    position: relative;
    .slick-dots{
+      font-size: 0;
       margin-top: 15px;
       display: flex;
       column-gap: 5px;
@@ -540,8 +549,12 @@
          transition: 0.1s all linear;
          outline: none;
          @media(min-width: $tablet-vertical){
+            font-size: 0;
             width: 10px;
             height: 10px;
+         }
+         button{
+            font-size: 0;
          }
       }
       .slick-active{
