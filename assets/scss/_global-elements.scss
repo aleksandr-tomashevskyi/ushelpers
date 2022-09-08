@@ -304,8 +304,7 @@ body{
 
 
 .main{
-   @include sections-margins;
-
+   @include after-header-margins;
    flex: 1 0 auto;
 }
 
@@ -419,6 +418,9 @@ body{
       }
       @media(min-width: $tablet-horizontal){
          width: 100%;
+      }
+      @media(min-width: $pc-large){
+         width: 90%;
       }
    }
    &__image{
