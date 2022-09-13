@@ -1,0 +1,39 @@
+.call-scheduler{
+   &__card{
+      width: max-content;
+      padding: 15px;
+      background-color: var(--color-secondary-accent);
+      // background-color: var(--site-background-color);
+      border-radius: 12px;
+   }
+   &__wrapper{
+      display: flex;
+      flex-direction: column;
+   }
+   &__form{
+      label{
+         @include title-third-font;
+         color: #FFFFFF;
+         margin-bottom: 5px;
+         @media(min-width: $tablet-vertical){
+            margin-bottom: 5px;
+         }
+      }
+   }
+   &__single-entry-wrapper{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+   }
+   &__input{
+      width: 300px;
+      padding: 15px 15px;
+      margin: 10px auto 0;
+      border-radius: 8px;
+      box-shadow: 1px 1px 5px var(--color-primary-accent), -1px -1px 5px var(--color-primary-accent);
+      -webkit-box-shadow: 1px 1px 5px var(--color-primary-accent), -1px -1px 5px var(--color-primary-accent);
+      @media(min-width: $tablet-horizontal){
+         padding: 20px 15px;
+      }
+   }
+}
