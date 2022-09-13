@@ -39,7 +39,7 @@ get_header();
                </div>
                <div class="call-scheduler__single-entry-wrapper">
                   <label>Phone</label>
-                  <input type="tel" class="call-scheduler__input">
+                  <input type="tel" class="call-scheduler__input call-scheduler__input--phone">
                </div>
                <div class="call-scheduler__single-entry-wrapper">
                   <label>Date for call</label>

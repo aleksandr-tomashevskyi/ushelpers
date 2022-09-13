@@ -16,7 +16,7 @@ function buildStyles() {
     .pipe(gulp.dest('assets/css/'))
 };
 function buildLateStyles() {
-  return gulp.src('assets/scss/late-styles/**/*.scss')
+  return gulp.src('assets/scss/late-styles/*.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer({cascade:true}))
     .pipe(rename({suffix: '.min'}))
@@ -33,6 +33,7 @@ function buildLibraryStyles() {
 function buildJs(){
   return gulp.src([
     "./node_modules/slick-carousel/slick/slick.min.js",
+    "./node_modules/intl-tel-input/build/js/intlTelInput.min.js"
   ])
   .pipe(concat("libs.min.js"))
   .pipe(uglify())

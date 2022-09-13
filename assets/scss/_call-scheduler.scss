@@ -1,3 +1,9 @@
+.iti__flag {background-image: url("../img/phone-input-flags/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("../img/phone-input-flags/flags@2x.png");}
+}
+
 .call-scheduler{
    &__card{
       width: max-content;

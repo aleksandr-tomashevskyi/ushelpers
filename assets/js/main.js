@@ -8,6 +8,16 @@ let navInnerElements;
 let navListTrigger;
 let windowScrollValue;
 
+//    Int-tel-input start
+
+// import intlTelInput from './libs.min.js';
+
+const input = document.querySelector(".call-scheduler__input--phone");
+intlTelInput(input, {
+    // any initialisation options go here
+});
+
+//    Int-tel-input end
 
 //    Slick slider start
 jQuery(function($){
