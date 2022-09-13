@@ -14,6 +14,8 @@ let windowScrollValue;
 
 const input = document.querySelector(".call-scheduler__input--phone");
 intlTelInput(input, {
+   utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+   separateDialCode: true,
     // any initialisation options go here
 });
 
