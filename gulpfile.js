@@ -22,6 +22,14 @@ function buildLateStyles() {
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('assets/css/'))
 };
+function buildLibraryStyles() {
+  return gulp.src([
+    './node_modules/intl-tel-input/build/css/intlTelInput.min.css',
+    './assets/css/normalize.css'
+  ])
+    .pipe(concat("libs.min.css"))
+    .pipe(gulp.dest('assets/css/'))
+};
 function buildJs(){
   return gulp.src([
     "./node_modules/slick-carousel/slick/slick.min.js",
@@ -32,10 +40,11 @@ function buildJs(){
 };
 exports.buildStyles = buildStyles;
 exports.buildJs = buildJs;
+exports.buildLibraryStyles = buildLibraryStyles;
 function watch() {
   gulp.watch('assets/scss/**/*.scss', buildStyles);
   gulp.watch('assets/scss/late-styles/*.scss', buildLateStyles);
   gulp.watch('./*.php');
   gulp.watch('assets/js/*js');
 };
-exports.default = parallel(buildJs, buildStyles, watch);
+exports.default = parallel(buildJs, buildStyles, watch, buildLibraryStyles);

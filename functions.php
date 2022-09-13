@@ -1,7 +1,10 @@
 <?php
 
 function theme_styles(){
-   wp_enqueue_style('site_main_style', get_theme_file_uri('/assets/css/styles.min.css'));
+   wp_register_style('site_library_styles', get_theme_file_uri('/assets/css/libs.min.css'), array(), null, null);
+   wp_enqueue_style('site_library_styles');
+   wp_register_style('site_main_styles', get_theme_file_uri('/assets/css/styles.min.css'), array(), null, null);
+   wp_enqueue_style('site_main_styles');
 }
 
 add_action('wp_enqueue_scripts', 'theme_styles', 99 );
