@@ -13,11 +13,19 @@ let windowScrollValue;
 // import intlTelInput from './libs.min.js';
 
 const input = document.querySelector(".call-scheduler__input--phone");
-intlTelInput(input, {
+const dialInput = document.querySelector('[name="country-dial-code"]')
+let iti = window.intlTelInput(input, {
    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
    separateDialCode: true,
     // any initialisation options go here
 });
+
+function formHandleChange(){
+   dialInput.value = '+' + iti.getSelectedCountryData().dialCode;
+//    const previousValue = input.value;
+//    input.value = '+' + iti.getSelectedCountryData().dialCode + previousValue;
+// console.log(iti.getSelectedCountryData().dialCode)
+}
 
 //    Int-tel-input end
 
