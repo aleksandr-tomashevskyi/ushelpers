@@ -28,33 +28,6 @@ get_header();
 
 <?php get_template_part( 'template-parts/free-call'); ?>
 
-<div class="container">
-   <div class="call-scheduler">
-      <div class="call-scheduler__card">
-         <form action="POST" class="call-scheduler__form">
-            <div class="call-scheduler__wrapper">
-               <div class="call-scheduler__single-entry-wrapper">
-                  <label>Your name</label>
-                  <input type="text" class="call-scheduler__input">
-               </div>
-               <div class="call-scheduler__single-entry-wrapper">
-                  <label>Phone</label>
-                  <input type="tel" class="call-scheduler__input call-scheduler__input--phone">
-               </div>
-               <div class="call-scheduler__single-entry-wrapper">
-                  <label>Date for call</label>
-                  <input type="date" class="call-scheduler__input">
-               </div>
-               <div class="call-scheduler__single-entry-wrapper">
-                  <label>Time for call</label>
-                  <input type="time" class="call-scheduler__input">
-               </div>
-            </div>
-         </form>
-      </div>
-   </div>
-</div>
-
 </main>
 <?php
 get_footer();
