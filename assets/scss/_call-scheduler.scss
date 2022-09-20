@@ -5,8 +5,25 @@
 }
 
 .call-scheduler{
+   display: inline-block;
+   &__container{
+      height: 0px;
+      transition: height 0.8s;
+      overflow: hidden;
+      user-select: none;
+   }
+   &__container--active{
+      height: 571px;
+      user-select: all;
+      @media(min-width: $tablet-vertical){
+      height: 612px;
+      }
+      @media(min-width: $tablet-horizontal){
+         height: 672px;
+         }
+   }
    &__card{
-      width: max-content;
+   display: inline-block;
       padding: 15px;
       background-color: var(--color-secondary-accent);
       // background-color: var(--site-background-color);
@@ -32,14 +49,15 @@
       margin-bottom: 10px;
    }
    &__input{
-      width: 300px;
+      width: 250px;
       padding: 15px 15px;
       margin: 10px auto 0;
       border-radius: 8px;
       box-shadow: 1px 1px 5px var(--color-primary-accent), -1px -1px 5px var(--color-primary-accent);
       -webkit-box-shadow: 1px 1px 5px var(--color-primary-accent), -1px -1px 5px var(--color-primary-accent);
       @media(min-width: $tablet-horizontal){
-         padding: 20px 15px;
+      width: 300px;
+      padding: 20px 15px;
       }
    }
 }
