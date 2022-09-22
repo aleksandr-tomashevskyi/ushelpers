@@ -10,6 +10,7 @@ get_header();
 ?>
      <main class="main">
    <?php get_template_part( 'template-parts/popup'); ?>
+   <?php echo do_shortcode('[fcs_initialize]') ?>
          <section class="main-block">
             <div class="container">
                <div class="main-block__columns">
@@ -26,7 +27,7 @@ get_header();
                      <p class="main-block__description"><?php the_field('home-main__text-block-1');?></p>
                      <p class="main-block__sub-title"><?php the_field('home-main__text-block-2');?></p>
                      <button onclick="showForm()" class="main-block__button main-block__button--orange">REQUEST STAFF VIA QUIZ FORM</button>
-                     <button class="main-block__button main-block__button--blue">SCHEDULE A FREE CALL</button>
+                     <button onclick="fcsFormShow(this)" class="main-block__button main-block__button--blue trigger__sheduler-upper">SCHEDULE A FREE CALL</button>
                   </div>
                </div>
                <div class="main-block__text-block">
@@ -91,9 +92,8 @@ get_header();
                      <p class="fields__card-description"><?php the_field('fields__picture-7-title');?></p>
                   </div>
                </div>
-            <div class="fields__discover-more-container"><a class="fields__discover-more-link" href="<?php echo get_page_link(24) ?>">DISCOVER MORE ABOUT OUR SPECIALISATIONS</a></div>
+               <div class="fields__discover-more-container"><a class="fields__discover-more-link" href="<?php echo get_page_link(24) ?>">DISCOVER MORE ABOUT OUR SPECIALISATIONS</a></div>
             </div>
-         </div>
       </section>
       <section class="getting">
          <div class="container">

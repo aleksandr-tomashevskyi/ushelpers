@@ -5,7 +5,13 @@
 }
 
 .call-scheduler{
+   display: none;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   &--active{
    display: inline-block;
+   }
    &__container{
       height: 0px;
       transition: height 0.8s;
