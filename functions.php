@@ -35,6 +35,27 @@ add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'custom-logo' );
 
+// Ajax handler
+
+add_action('wp_ajax_get_quiz_content', 'get_quiz_content_callback');
+add_action('wp_ajax_nopriv_get_quiz_content', 'get_quiz_content_callback');
+
+function get_quiz_content_callback(){
+   echo do_shortcode('[qsm quiz=2]');
+   wp_die();
+}
+
+function js_variables(){
+   $variables = array (
+       'ajax_url' => admin_url('admin-ajax.php'),
+   );
+   echo(
+       '<script type="text/javascript">window.wp_data = '. json_encode($variables). ';</script>'
+   );
+}
+add_action('wp_head','js_variables');
+
+// Ajax handler end
 
 function is_parent()
 {

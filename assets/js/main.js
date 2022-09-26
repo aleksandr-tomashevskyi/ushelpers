@@ -8,6 +8,41 @@ let navInnerElements;
 let navListTrigger;
 let windowScrollValue;
 
+//    Ajax
+
+console.log(window.wp_data.ajax_url)
+
+// function loadAjax(){
+// jQuery(function($){
+//    $.ajax({
+//        type: "GET",
+//        url: window.wp_data.ajax_url,
+//        data: {
+//            action : 'get_quiz_content'
+//        },
+//        success: function (response) {
+//            console.log(response);
+//        }
+//    });
+// });
+// }
+
+function loadAjax(){
+   let xhr = new XMLHttpRequest();
+   // let data = {
+   //    action: 'get_quiz_content'
+   // }
+   xhr.open('GET', window.wp_data.ajax_url + '?action=get_quiz_content', true);
+
+   xhr.onload = function(){
+      if(this.status == 200){
+         console.log(this.responseText);
+      }
+   }
+
+   xhr.send();
+}
+
 //    Slick slider start
 jQuery(function($){
    $('.cases-slider').slick({

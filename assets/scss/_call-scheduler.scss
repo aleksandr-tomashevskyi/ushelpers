@@ -9,31 +9,34 @@
    position: absolute;
    left: 50%;
    top: 50%;
+
    &--active{
    display: inline-block;
    }
    &__container{
+      padding: 10px;
       height: 0px;
       transition: height 0.8s;
       overflow: hidden;
       user-select: none;
    }
    &__container--active{
-      height: 571px;
+      height: 582px;
       user-select: all;
       @media(min-width: $tablet-vertical){
-      height: 612px;
+      height: 624px;
       }
       @media(min-width: $tablet-horizontal){
-         height: 672px;
+         height: 690px;
          }
    }
    &__card{
+      border-radius: 12px;
+      box-shadow: 5px 5px 5px rgba(63, 63, 63, 0.8), -5px 5px 5px rgba(63, 63, 63, 0.8);
    display: inline-block;
       padding: 15px;
       background-color: var(--color-secondary-accent);
       // background-color: var(--site-background-color);
-      border-radius: 12px;
    }
    &__wrapper{
       display: flex;
