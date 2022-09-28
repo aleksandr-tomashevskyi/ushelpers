@@ -10,28 +10,28 @@ get_header();
 ?>
      <main class="main">
    <?php get_template_part( 'template-parts/popup'); ?>
-         <section class="main-block">
+         <section class="front-page-block">
             <div class="container">
-               <div class="main-block__columns">
-                  <div class="main-block__column main-block__column--index-page">
-                     <div class="main-block__image-container">
-                        <picture>
-                           <source class="main-block__image" srcset="<?php the_field('home-main__image-mobile-pc');?>" media="(min-width: 1024px)">
-                           <img class="main-block__image" src="<?php the_field('home-main__image-mobile');?>" alt="image">
-                        </picture>
+            <img class="front-page-block__image" src="<?php the_field('home-main__image');?>" alt="image">
+            <h1 class="front-page-block__title"><?php the_field('home-main__h1_title');?></h1>
+            <p class="front-page-block__description"><?php the_field('home-main__text-block-1');?></p>
+            <p class="front-page-block__sub-title"><?php the_field('home-main__text-block-2');?></p>
+            <div class="front-page-block__buttons-container">
+               <button onclick="activatePopup(this)" class="front-page-block__button front-page-block__button--orange" name="quiz-button">REQUEST STAFF VIA QUIZ FORM</button>
+               <button onclick="activatePopup(this)" class="front-page-block__button front-page-block__button--blue trigger__sheduler-upper">SCHEDULE A FREE CALL</button>
+            </div>
+               <div class="front-page-block__columns">
+                  <div class="front-page-block__column front-page-block__column--image">
+                     <div class="front-page-block__image-container">
+                        <img class="front-page-block__image" src="<?php the_field('home-main__image-text-block');?>" alt="image">
                      </div>
                   </div>
-                  <div class="main-block__column">
-                     <h1 class="main-block__title"><?php the_field('home-main__h1_title');?></h1>
-                     <p class="main-block__description"><?php the_field('home-main__text-block-1');?></p>
-                     <p class="main-block__sub-title"><?php the_field('home-main__text-block-2');?></p>
-                     <button onclick="showForm()" class="main-block__button main-block__button--orange">REQUEST STAFF VIA QUIZ FORM</button>
-                     <button onclick="loadAjax()" class="main-block__button main-block__button--blue trigger__sheduler-upper">SCHEDULE A FREE CALL</button>
+                  <div class="front-page-block__column front-page-block__column--text">
+                     <div class="front-page-block__text-block">
+                     <p class="front-page-block__text-block-plain-text"><?php the_field('home-main__text-block-3');?></p>
+                     <p class="front-page-block__text-block-sub-title"><?php the_field('home-main__text-block-4');?></p>
+                     </div>
                   </div>
-               </div>
-               <div class="main-block__text-block">
-                  <p class="main-block__text-block-plain-text"><?php the_field('home-main__text-block-3');?></p>
-                  <p class="main-block__text-block-sub-title"><?php the_field('home-main__text-block-4');?></p>
                </div>
             </div>
          </section>

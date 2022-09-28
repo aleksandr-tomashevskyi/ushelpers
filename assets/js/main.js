@@ -36,6 +36,7 @@ function loadAjax(){
 
    xhr.onload = function(){
       if(this.status == 200){
+         document.querySelector('.popup-window__content').innerHTML = this.responseText;
          console.log(this.responseText);
       }
    }
@@ -278,24 +279,40 @@ quizSections[quizSections.length-1].parentElement.classList.add("qsm-page--conta
 
 if(document.querySelector('.popup-window')){
    const popupWindow = document.querySelector(".popup-window");
-   popupWindow.addEventListener("click", hideForm);
+   popupWindow.addEventListener("click", hidePopup);
 
 }
 
-function showForm(){
+function activatePopup(item){
    document.querySelector(".popup-window").classList.toggle("popup-window--active");
    setTimeout(()=>document.querySelector(".popup-window__body").classList.toggle("popup-window__body--active"), 10);
    //disabling scroll
+   console.log(item)
    hideShowScroll();
+   if(item.getAttribute('name')=='quiz-button'){
+      showQuizContent();
+   } else{
+      showCalendlyContent();
+   }
 }
-function hideForm(event){
+
+function hidePopup(event){
    if(!event.target.closest(".popup-window__body")){
       document.querySelector(".popup-window").classList.toggle("popup-window--active");
       document.querySelector(".popup-window__body").classList.toggle("popup-window__body--active");
+   document.querySelector('.popup-window__quiz-content').classList.remove('popup-window__quiz-content--active');
+   document.querySelector('.popup-window__calendly-content').classList.remove('popup-window__calendly-content--active');
       //returning scroll
       hideShowScroll();
    }
 }
+
+function showQuizContent(){
+document.querySelector('.popup-window__quiz-content').classList.add('popup-window__quiz-content--active');
+}
+function showCalendlyContent(){
+   document.querySelector('.popup-window__calendly-content').classList.add('popup-window__calendly-content--active');
+   }
 
 //    Posts excerpt control
 

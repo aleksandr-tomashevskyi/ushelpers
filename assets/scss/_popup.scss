@@ -65,6 +65,16 @@
    transform: rotateX(0deg) scale(1);
    opacity: 1;
 }
-.popup-window__content--diactivated{
+.popup-window__quiz-content{
    display: none;
+   &--active{
+   display: block;
+   }
+}
+
+.popup-window__calendly-content{
+   display: none;
+   &--active{
+      display: block;
+      }
 }
