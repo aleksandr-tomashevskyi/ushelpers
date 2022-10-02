@@ -90,4 +90,38 @@
    &__image{
       width: 100%;
    }
+   &__whattsup-link{
+      @include links-font;
+      font-size: 8px;
+      line-height: 1em;
+      @media(min-width: $tablet-vertical){
+         font-size: 16px;
+      }
+      @media(min-width: $tablet-horizontal){
+         font-size: 20px;
+      }
+      @media(min-width: $pc-small){
+         font-size: 14px;
+      }
+      @media(min-width: $pc-large){
+         font-size: 18px;
+      }
+   }
+   &__email-link{
+      @include links-font;
+      font-size: 8px;
+      line-height: 1em;
+      @media(min-width: $tablet-vertical){
+         font-size: 16px;
+      }
+      @media(min-width: $tablet-horizontal){
+         font-size: 20px;
+      }
+      @media(min-width: $pc-small){
+         font-size: 14px;
+      }
+      @media(min-width: $pc-large){
+         font-size: 18px;
+      }
+   }
 }
