@@ -5,6 +5,8 @@
    <meta name="viewport" content="width=device-width, initial-screen-scale=1.0">
    <meta name="author" content="Oleksandr Tomashevskyi">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta property="og:title" content="HR agency">
+   <meta property="og:image" content="<?php echo get_theme_file_uri("assets/icons/logo-4-3.svg") ?>">
    <?php wp_head(); ?>
 </head>
 <body>
