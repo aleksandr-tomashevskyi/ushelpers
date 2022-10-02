@@ -4,7 +4,7 @@
          <h3 class="footer__column-title"><a class="footer__title-link" href="<?php echo site_url('/contacts') ?>">Contacts</a></h3>
             <ul class="footer__list">
                <li class="footer__list-item">Call or text us by WhatsApp: <a href="https://wa.me/+16465435946" class="footer__wattsup-link">+1 646 543 5946</a></li>
-               <li class="footer__list-item">Mail: partnership@helpresource.us</li>
+               <li class="footer__list-item">Mail: <a href="mailto:partnership@helpresource.us" class="footer__email-link">partnership@helpresource.us</a></li>
                <li class="footer__list-item">Office address: 80 Broad Street, 5th floor, New York, 10004</li>
             </ul>
          </div>

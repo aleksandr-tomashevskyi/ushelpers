@@ -685,6 +685,12 @@ body{
    &__list-item{
       @include p-first-font;
    }
+   &__wattsup-link{
+      @include links-font;
+   }
+   &__email-link{
+      @include links-font;
+   }
    &__list-link{
       text-transform: capitalize;
       &:hover{
