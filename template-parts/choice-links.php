@@ -1,7 +1,7 @@
 <section class="choice-links">
    <div class="container">
       <p class="choice-links__links">
-         <a href="" class="choice-links__link">Submit your job order here</a> or <a href="" class="choice-links__link">Schedule a FREE call with our specialist</a>
+         <button class="choice-links__link" name="quiz-button" onclick="activatePopup(this)">Submit your job order here</button> or <button class="choice-links__link" onclick="activatePopup(this)">Schedule a FREE call with our specialist</button>
       </p>
    </div>
 </section>
