@@ -151,11 +151,9 @@
    &__cards-block{
       display: grid;
       row-gap: 40px;
+      column-gap: 5px;
       margin: 50px 0;
-      @media(min-width: $tablet-vertical){
-         display: grid;
-         grid-template-columns: repeat(2, 1fr);
-      }
+      grid-template-columns: repeat(2, 140px);
       @media(min-width: $tablet-horizontal){
          display: grid;
          grid-template-columns: repeat(3, 1fr);
@@ -172,6 +170,9 @@
       }
    }
    &__card-container{
+      &:last-child{
+         grid-column-start: span 2;
+      }
       @media(min-width: $tablet-vertical){
          &:last-child{
             grid-column-start: span 2;
@@ -201,11 +202,15 @@
    }
    &__card-image-container{
       position: relative;
-      width: 156px;
-      height: 156px;
+      width: 120px;
+      height: 120px;
       margin: 0 auto 17px;
       overflow: hidden;
       cursor: pointer;
+      @media(min-width: $tablet-vertical){
+         width: 156px;
+         height: 156px;
+      }
       @media(hover: hover){
          &:hover .fields__card-image-hover{
             top: 0;
@@ -342,9 +347,9 @@
    &__title{
       @include title-third-font;
       color: var(--color-secondary-accent);
-      font-size: calc(10px + (26 - 10)*((100vw - 320px) / (1920 - 320))); //26px to 10px
-      line-height: 1em;
-      margin-bottom: 0.3em;
+      font-size: calc(16px + (26 - 16)*((100vw - 320px) / (1920 - 320))); //26px to 10px
+      line-height: 1.2em;
+      margin-bottom: 1em;
    }
    &__sub-title{
       @include p-first-font;
