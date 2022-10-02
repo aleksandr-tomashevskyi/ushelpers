@@ -86,6 +86,7 @@ function add_img_short(){
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+// adding cases post types to dasboard
 function cases_post_types(){
    register_post_type('cases', array(
       'public' => true,

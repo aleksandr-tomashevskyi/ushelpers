@@ -22,6 +22,9 @@
       @media(min-width: $tablet-vertical){
          margin: 20px auto;
       }
+      @media(min-width: $pc-large){
+         width: 900px;
+      }
    }
    &__text-container{
       width: 150px;
