@@ -67,11 +67,11 @@
    }
    &__date-container{
       margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--color-secondary-accent);
    }
    &__date{
       @include p-third-font;
-      padding-bottom: 5px;
-      border-bottom: 1px solid var(--color-secondary-accent);
    }
    &__title-container{
       margin-bottom: 10px;
