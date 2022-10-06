@@ -22,6 +22,7 @@ get_header();
                   }
                ?>
             </div>
+            <div class="blog-container__pagination-container"><?php echo paginate_links(); ?></div>
       </div>
    </div>
 </main>

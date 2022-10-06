@@ -1,4 +1,6 @@
 .blog-container{
+   display: flex;
+   flex-direction: column;
    &__title{
       @include title-first-font;
       color: var(--color-secondary-accent);
@@ -10,6 +12,17 @@
    &__description{
       @include p-first-font;
       color: var(--color-secondary-accent);
+   }
+   &__pagination-container{
+      margin-top: 90px;
+      a, span{
+         color: var(--color-secondary-accent);
+         margin-right: 30px;
+         @include links-font;
+         border-bottom: none;
+         text-decoration: none;
+         cursor: pointer;
+      }
    }
 }
 
