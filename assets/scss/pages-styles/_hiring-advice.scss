@@ -1,4 +1,9 @@
-.post{
+.posts-container{
+   display: grid;
+   row-gap: 60px;
+}
+
+.post-blog{
    color: var(--color-secondary-accent);
    &__thumbnail-container{
       img{
@@ -6,5 +11,31 @@
          height: 100%;
          object-fit: cover;
       }
+      margin-bottom: 10px;
+   }
+   &__date-container{
+      margin-bottom: 10px;
+   }
+   &__date{
+      @include p-third-font;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--color-secondary-accent);
+   }
+   &__title-container{
+      margin-bottom: 10px;
+   }
+   &__title{
+      @include title-second-font;
+      margin-bottom: 0;
+   }
+   &__excerpt-container{
+      margin-bottom: 10px;
+   }
+   &__excerpt{
+      @include p-second-font;
+   }
+   &__read-more-link-container{
+      @include links-font;
+      text-align: right;
    }
 }
