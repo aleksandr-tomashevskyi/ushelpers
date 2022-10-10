@@ -30,6 +30,10 @@
    }
    &__wrapper{
       margin-top: 30px;
+      display: flex;
+      @media(min-width: $tablet-horizontal){
+         column-gap: 40px;
+      }
    }
    &__date-container{
       margin-bottom: 15px;
@@ -84,5 +88,19 @@
       @include title-second-font;
       color: var(--color-secondary-accent);
       margin-top: 40px;
+   }
+   &__highlights-container{
+      @media(min-width: $tablet-horizontal){
+         flex: 0 0 30%;
+      }
+   }
+   &__highlights-content{
+      @media(min-width: $tablet-horizontal){
+         margin-top: 30px;
+      }
+   }
+   &__highlights-title{
+      @include p-second-font;
+      color: var(--color-secondary-accent);
    }
 }

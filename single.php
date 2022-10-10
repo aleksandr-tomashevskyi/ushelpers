@@ -1,7 +1,13 @@
 <?php
-
    get_header();
+//global variables
+$allPosts = new WP_Query(array(
+   'post_type' => 'post',
+));
+// $allPostsIds = [];
+
 ?>
+
 <main class="main">
    <div class="container">
       <div class="post-single">
@@ -22,7 +28,20 @@
                   <p class="post-single__paragraph"><?php the_field('post__paragraph-2');?></p>
                </div>
             </div>
-            <div class="post-single__highlights-container"></div>
+            <div class="post-single__highlights-container">
+               <div class="post-single__highlights-content">
+                  <h3 class="post-single__highlights-title">Posts that might be interesting for you:</h3>
+               </div>
+               <?php 
+               // echo $allPostsIds; 
+               while($allPosts->have_posts()){
+                  $allPosts->the_post();
+                  ?> <br> <?php
+                  echo get_the_ID();
+                  // array_push($allPostsIds, get_the_ID());
+               };
+               ?>
+            </div>            
          </div>
       </div>
 </div>

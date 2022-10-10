@@ -10,7 +10,7 @@
          <div class="main-block__column">
             <h1 class="main-block__title"><?php the_field('main-block__title');?></h1>
             <p class="main-block__description"><?php the_field('main-block__text');?></p>
-            <button class="main-block__button main-block__button--orange" onclick="activatePopup(this)">REQUEST STAFF VIA QUIZ FORM</button>
+            <button class="main-block__button main-block__button--orange" name="quiz-button" onclick="activatePopup(this)">REQUEST STAFF VIA QUIZ FORM</button>
          </div>
       </div>
    </div>
