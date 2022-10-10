@@ -1,10 +1,9 @@
 <?php /* Template Name: contacts */ ?>
-
 <?php
 get_header();
 ?>
 <main class="main">
-
+<?php get_template_part( 'template-parts/popup'); ?>
 <section class="contacts">
    <div class="container">
       <div class="contacts__columns">
