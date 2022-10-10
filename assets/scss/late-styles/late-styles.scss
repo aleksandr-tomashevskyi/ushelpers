@@ -50,11 +50,11 @@
 }
 @media (hover: hover){
    .qmn_image_option:hover{
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(204, 190, 60, 1);
    }
 }
 .qmn_image_option--active{
-   background-color: rgba(0, 0, 0, 0.7);
+   background-color: rgba(204, 190, 60, 0.8);
 }
 .quiz_section .mlw_qmn_new_question{
    @include title-second-font;
