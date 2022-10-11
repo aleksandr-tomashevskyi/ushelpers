@@ -4,8 +4,8 @@
 $allPosts = new WP_Query(array(
    'post_type' => 'post',
 ));
-// $allPostsIds = [];
-
+$allPostsIds = [];
+$randomPostChoices = [];
 ?>
 
 <main class="main">
@@ -38,8 +38,18 @@ $allPosts = new WP_Query(array(
                   $allPosts->the_post();
                   ?> <br> <?php
                   echo get_the_ID();
-                  // array_push($allPostsIds, get_the_ID());
+                  array_push($allPostsIds, get_the_ID());
+                  wp_reset_postdata();
                };
+               ?> <br> <?php
+               while(count($randomPostChoices)<2){
+                  $newChoice = rand(0,count($allPostsIds));
+                  if(!in_array($newChoice, $randomPostChoices)){
+                     array_push($randomPostChoices, $newChoice);
+                  };
+               };
+               ?> <br> <?php
+               echo $randomPostChoices[0], $randomPostChoices[1];
                ?>
             </div>            
          </div>
