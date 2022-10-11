@@ -6,6 +6,7 @@ $allPosts = new WP_Query(array(
 ));
 $allPostsIds = [];
 $randomPostChoices = [];
+$choosenPostsIds = [];
 ?>
 
 <main class="main">
@@ -33,23 +34,18 @@ $randomPostChoices = [];
                   <h3 class="post-single__highlights-title">Posts that might be interesting for you:</h3>
                </div>
                <?php 
-               // echo $allPostsIds; 
                while($allPosts->have_posts()){
                   $allPosts->the_post();
-                  ?> <br> <?php
-                  echo get_the_ID();
-                  array_push($allPostsIds, get_the_ID());
+                  array_push($allPostsIds, get_the_ID()); //filling an array with all post IDs
                   wp_reset_postdata();
                };
-               ?> <br> <?php
                while(count($randomPostChoices)<2){
-                  $newChoice = rand(0,count($allPostsIds));
+                  $newChoice = rand(0,count($allPostsIds)-1);
                   if(!in_array($newChoice, $randomPostChoices)){
                      array_push($randomPostChoices, $newChoice);
+                     array_push($choosenPostsIds, $allPostsIds[$newChoice]);
                   };
                };
-               ?> <br> <?php
-               echo $randomPostChoices[0], $randomPostChoices[1];
                ?>
             </div>            
          </div>
