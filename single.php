@@ -4,6 +4,7 @@
 $allPosts = new WP_Query(array(
    'post_type' => 'post',
 ));
+$currentPostId = get_the_ID();
 $allPostsIds = [];
 $randomPostChoices = [];
 $choosenPostsIds = [];
@@ -41,12 +42,17 @@ $choosenPostsIds = [];
                };
                while(count($randomPostChoices)<2){
                   $newChoice = rand(0,count($allPostsIds)-1);
-                  if(!in_array($newChoice, $randomPostChoices)){
+                  if(!in_array($newChoice, $randomPostChoices) && $allPostsIds[$newChoice] != $currentPostId){
                      array_push($randomPostChoices, $newChoice);
                      array_push($choosenPostsIds, $allPostsIds[$newChoice]);
                   };
                };
-               ?>
+               $postToDisplay = get_post($choosenPostsIds[0]); ?>
+               <div class="post-blog__thumbnail-container"><img src="<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($postToDisplay), 'full'); echo $image[0];?>" /></div>
+                     <div class="post-blog__date-container"><p class="post-blog__date">Published on: <?php echo get_the_date('', $postToDisplay); ?></p></div>
+                     <div class="post-blog__title-container"><h3 class="post-blog__title"><?php echo get_the_title($postToDisplay); ?></h3></div>
+                     <div class="post-blog__excerpt-container"><p class="post-blog__excerpt"><?php echo get_the_excerpt($postToDisplay); ?></p></div>
+                     <div class="post-blog__read-more-link-container"><a href="<?php echo get_permalink($postToDisplay); ?>" class="post-blog__read-more-link">Read more</a></div>
             </div>            
          </div>
       </div>
