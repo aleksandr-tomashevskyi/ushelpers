@@ -40,7 +40,14 @@ $choosenPostsIds = [];
                   array_push($allPostsIds, get_the_ID()); //filling an array with all post IDs
                   wp_reset_postdata();
                };
-               while(count($randomPostChoices)<2){
+               $postsAvailable = count($allPostsIds); //counting all posts
+               if($postsAvailable <= 4){
+                  $postsToDisplay = count($allPostsIds) - 1; //setting maximum posts for display to maximum posts available
+               } else{
+                  $postsToDisplay = 4; //when number of posts are more than needed we display fixed number of posts
+               }
+               echo $postsToDisplay;
+               while(count($randomPostChoices)<$postsToDisplay){
                   $newChoice = rand(0,count($allPostsIds)-1);
                   if(!in_array($newChoice, $randomPostChoices) && $allPostsIds[$newChoice] != $currentPostId){
                      array_push($randomPostChoices, $newChoice);
