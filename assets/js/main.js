@@ -27,22 +27,22 @@ console.log(window.wp_data.ajax_url)
 // });
 // }
 
-function loadAjax(){
-   let xhr = new XMLHttpRequest();
-   // let data = {
-   //    action: 'get_quiz_content'
-   // }
-   xhr.open('GET', window.wp_data.ajax_url + '?action=get_quiz_content', true);
+// function loadAjax(){
+//    let xhr = new XMLHttpRequest();
+//    // let data = {
+//    //    action: 'get_quiz_content'
+//    // }
+//    xhr.open('GET', window.wp_data.ajax_url + '?action=get_quiz_content', true);
 
-   xhr.onload = function(){
-      if(this.status == 200){
-         document.querySelector('.popup-window__content').innerHTML = this.responseText;
-         console.log(this.responseText);
-      }
-   }
+//    xhr.onload = function(){
+//       if(this.status == 200){
+//          document.querySelector('.popup-window__content').innerHTML = this.responseText;
+//          console.log(this.responseText);
+//       }
+//    }
 
-   xhr.send();
-}
+//    xhr.send();
+// }
 
 //    Slick slider start
 jQuery(function($){

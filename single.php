@@ -33,34 +33,41 @@ $choosenPostsIds = [];
             <div class="post-single__highlights-container">
                <div class="post-single__highlights-content">
                   <h3 class="post-single__highlights-title">Posts that might be interesting for you:</h3>
-               </div>
-               <?php 
-               while($allPosts->have_posts()){
-                  $allPosts->the_post();
-                  array_push($allPostsIds, get_the_ID()); //filling an array with all post IDs
-                  wp_reset_postdata();
-               };
-               $postsAvailable = count($allPostsIds); //counting all posts
-               if($postsAvailable <= 4){
-                  $postsToDisplay = count($allPostsIds) - 1; //setting maximum posts for display to maximum posts available
-               } else{
-                  $postsToDisplay = 4; //when number of posts are more than needed we display fixed number of posts
-               }
-               echo $postsToDisplay;
-               while(count($randomPostChoices)<$postsToDisplay){
-                  $newChoice = rand(0,count($allPostsIds)-1);
-                  if(!in_array($newChoice, $randomPostChoices) && $allPostsIds[$newChoice] != $currentPostId){
-                     array_push($randomPostChoices, $newChoice);
-                     array_push($choosenPostsIds, $allPostsIds[$newChoice]);
+                  <?php 
+                  while($allPosts->have_posts()){
+                     $allPosts->the_post();
+                     array_push($allPostsIds, get_the_ID()); //filling an array with all post IDs
+                     wp_reset_postdata();
                   };
-               };
-               $postToDisplay = get_post($choosenPostsIds[0]); ?>
-               <div class="post-blog__thumbnail-container"><img src="<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($postToDisplay), 'full'); echo $image[0];?>" /></div>
-                     <div class="post-blog__date-container"><p class="post-blog__date">Published on: <?php echo get_the_date('', $postToDisplay); ?></p></div>
-                     <div class="post-blog__title-container"><h3 class="post-blog__title"><?php echo get_the_title($postToDisplay); ?></h3></div>
-                     <div class="post-blog__excerpt-container"><p class="post-blog__excerpt"><?php echo get_the_excerpt($postToDisplay); ?></p></div>
-                     <div class="post-blog__read-more-link-container"><a href="<?php echo get_permalink($postToDisplay); ?>" class="post-blog__read-more-link">Read more</a></div>
-            </div>            
+                  $postsAvailable = count($allPostsIds); //counting all posts
+                  if($postsAvailable <= 4){
+                     $postsToDisplay = count($allPostsIds) - 1; //setting maximum posts for display to maximum posts available
+                  } else{
+                     $postsToDisplay = 4; //when number of posts are more than needed we display fixed number of posts
+                  }
+                  while(count($randomPostChoices)<$postsToDisplay){
+                     $newChoice = rand(0,count($allPostsIds)-1);
+                     if(!in_array($newChoice, $randomPostChoices) && $allPostsIds[$newChoice] != $currentPostId){
+                        array_push($randomPostChoices, $newChoice);
+                        array_push($choosenPostsIds, $allPostsIds[$newChoice]);
+                     };
+                  };
+                  ?>
+                  <div class="post-highlight-slider">
+                     <?php for($i = 0; $i<count($choosenPostsIds); $i++){
+                        $postToDisplay = get_post($choosenPostsIds[$i]);
+                        ?>
+                     <div class="post-highlight">
+                           <div class="post-highlight__thumbnail-container"><img src="<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($postToDisplay), 'full'); echo $image[0];?>" /></div>
+                           <div class="post-highlight__date-container"><p class="post-highlight__date">Published on: <?php echo get_the_date('', $postToDisplay); ?></p></div>
+                           <div class="post-highlight__title-container"><h3 class="post-highlight__title"><?php echo get_the_title($postToDisplay); ?></h3></div>
+                           <div class="post-highlight__excerpt-container"><p class="post-highlight__excerpt"><?php echo get_the_excerpt($postToDisplay); ?></p></div>
+                           <div class="post-highlight__read-more-link-container"><a href="<?php echo get_permalink($postToDisplay); ?>" class="post-highlight__read-more-link">Read more</a></div>
+                     </div>
+                     <?php } ?>
+                  </div>
+               </div>
+            </div>           
          </div>
       </div>
 </div>
