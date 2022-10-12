@@ -32,7 +32,7 @@ $choosenPostsIds = [];
             </div>
             <div class="post-single__highlights-container">
                <div class="post-single__highlights-content">
-                  <h3 class="post-single__highlights-title">Posts that might be interesting for you:</h3>
+                  <h3 class="post-single__highlights-title">Read our other posts:</h3>
                   <?php 
                   while($allPosts->have_posts()){
                      $allPosts->the_post();

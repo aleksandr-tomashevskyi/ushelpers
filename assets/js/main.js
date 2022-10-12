@@ -84,12 +84,12 @@ jQuery(function($){
       vertical: true,
       infinite: true,
       arrows: false,
-      speed: 500,
+      speed: 1000,
       centerMode: false,
       adaptiveHeight: true,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 10000,
+      autoplaySpeed: 8000,
       slidesToShow: 2,
       verticalSwiping: true,
       responsive: [
@@ -98,7 +98,8 @@ jQuery(function($){
             settings:{
                arrows: true,
                slidesToShow: 1,
-               vertical: false
+               vertical: false,
+               verticalSwiping: false,
             }
          }
       ],
