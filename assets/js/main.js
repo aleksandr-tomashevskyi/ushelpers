@@ -83,18 +83,20 @@ jQuery(function($){
       dots: false,
       vertical: true,
       infinite: true,
-      arrows: true,
+      arrows: false,
       speed: 500,
       centerMode: false,
-      adaptiveHeight: false,
+      adaptiveHeight: true,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 10000,
       slidesToShow: 2,
+      verticalSwiping: true,
       responsive: [
          {
             breakpoint: 769,
             settings:{
+               arrows: true,
                slidesToShow: 1,
                vertical: false
             }
