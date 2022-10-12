@@ -48,7 +48,7 @@
                            </ul>
                         </li>
                         <li class="navigation__list-item">
-                           <a class="navigation__link" href="#">hiring advice</a>
+                           <a class="navigation__link" href="<?php echo site_url('/hiring-advice') ?>">hiring advice</a>
                         </li>
                         <li class="navigation__list-item">
                            <a class="navigation__link" href="<?php echo site_url('/about-us') ?>">about us</a>
