@@ -79,6 +79,28 @@ jQuery(function($){
          }
       ],
    });
+   $('.post-highlight-slider').slick({
+      dots: false,
+      vertical: true,
+      infinite: true,
+      arrows: true,
+      speed: 500,
+      centerMode: false,
+      adaptiveHeight: false,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 10000,
+      slidesToShow: 2,
+      responsive: [
+         {
+            breakpoint: 769,
+            settings:{
+               slidesToShow: 1,
+               vertical: false
+            }
+         }
+      ],
+   });
 })
 
 //    Slick slider end
