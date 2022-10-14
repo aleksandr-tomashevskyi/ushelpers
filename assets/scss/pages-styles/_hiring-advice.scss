@@ -24,6 +24,10 @@
          cursor: pointer;
       }
    }
+   &__no-posts-title{
+      margin-top: 80px;
+      @include title-first-font;
+   }
 }
 
 .posts-container{
