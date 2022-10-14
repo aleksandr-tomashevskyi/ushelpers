@@ -3,11 +3,6 @@
 <?php
 get_header();
 ?>
-<?php //global variables
-$globalBlocks = new WP_Query(array(
-   'category_name' => 'Reusable blocks'
-));
-?>
 <main class="main">
             <?php
                get_template_part( 'template-parts/main-block');
@@ -56,13 +51,7 @@ $globalBlocks = new WP_Query(array(
                   </div>
                   <div class="industries__outer-grid-cell industries__outer-grid-cell--third">
                   <?php
-                     while( $globalBlocks->have_posts()){
-                        $globalBlocks->the_post();
-                        if(get_the_ID() == 159){
-                           the_content();
-                        };
-                     };
-                     wp_reset_postdata();
+                  get_template_part( 'template-parts/hr-template');
                      ?>
                   </div>
                </div>
