@@ -67,10 +67,20 @@ $choosenPostsIds = [];
                      <?php } ?>
                   </div>
                </div>
-            </div>           
+            </div>         
          </div>
+         <div class="post-single__buttons-container">
+            <div class="post-single__buttons post-single__buttons--previous"><span>Go to previous post</span></div>
+            <div class="post-single__buttons post-single__buttons--next"><span>Go to next post</span></div>
+         </div>
+         <?php 
+         // foreach($allPostsIds as $item){
+               // echo $item.'<br>';
+            // }; 
+            // echo array_search(get_the_ID(), $allPostsIds);
+            ?>
       </div>
-</div>
+   </div>
 </main>
 <?php 
 

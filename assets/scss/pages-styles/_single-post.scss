@@ -115,6 +115,58 @@
       padding: 10px 0 20px 10px;
       }
    }
+   &__buttons-container{
+      @include sections-margins;
+      display: flex;
+      justify-content: space-between;
+   }
+   &__buttons{
+      @include links-font;
+      color: var(--color-secondary-accent);
+      cursor: pointer;
+      span{
+         display: none;
+         @media(min-width: $tablet-vertical){
+            display: inline;
+         }
+      }
+   }
+   &__buttons--previous{
+      &::before{
+         content: '';
+         background-image: url(../../assets/icons/left-arrow-blog.svg);
+         background-size: contain;
+         display: inline-block;
+         position: relative;
+         width: 52px;
+         height: 52px;
+         @media(min-width: $tablet-vertical){
+            top: 60%;
+            transform: translateY(-50%);
+            margin-right: 10px;
+            width: 32px;
+            height: 32px;
+         }
+      }
+   }
+   &__buttons--next{
+      &::after{
+         content: '';
+         background-image: url(../../assets/icons/right-arrow-blog.svg);
+         background-size: contain;
+         display: inline-block;
+         position: relative;
+         width: 52px;
+         height: 52px;
+         @media(min-width: $tablet-vertical){
+            top: 60%;
+            transform: translateY(-50%);
+            margin-left: 10px;
+            width: 32px;
+            height: 32px;
+         }
+      }
+   }
 }
 
 .post-highlight-slider{
