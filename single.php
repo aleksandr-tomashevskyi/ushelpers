@@ -70,8 +70,8 @@ $choosenPostsIds = [];
             </div>         
          </div>
          <div class="post-single__buttons-container">
-            <div class="post-single__buttons post-single__buttons--previous"><span>Go to previous post</span></div>
-            <div class="post-single__buttons post-single__buttons--next"><span>Go to next post</span></div>
+            <div class="post-single__buttons post-single__buttons--previous"><span class="post-single__button-text-mobile">prev</span><span class="post-single__button-text-pc">Go to previous post</span></div>
+            <div class="post-single__buttons post-single__buttons--next"><span class="post-single__button-text-mobile">next</span><span class="post-single__button-text-pc">Go to next post</span></div>
          </div>
          <?php 
          // foreach($allPostsIds as $item){
