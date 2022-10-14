@@ -80,6 +80,14 @@
    &__title-container{
       margin-bottom: 10px;
    }
+   &__title-link{
+      text-decoration: none;
+      transition: all 0.1s;
+      cursor: pointer;
+      &:hover{
+         text-decoration: underline;
+      }
+   }
    &__title{
       @include title-third-font;
       margin-bottom: 0;
