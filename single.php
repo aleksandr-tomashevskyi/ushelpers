@@ -94,10 +94,10 @@ if(!$nextPostId){
             </div>         
          </div>
          <div class="post-single__buttons-container">
-            <div class="post-single__buttons post-single__buttons--previous">
+            <div class="post-single__buttons post-single__buttons-previous <?php echo $prevPostExistence ? '' : 'post-single__buttons-previous--disabled' ?>">
                <a href="<?php echo $prevPostExistence ? get_permalink($prevPostId) : '#'; ?>" class="post-single__buttons-link"><span class="post-single__button-text-mobile">prev</span><span class="post-single__button-text-pc">Go to previous post</span></a>
             </div>
-            <div class="post-single__buttons post-single__buttons--next">
+            <div class="post-single__buttons post-single__buttons-next <?php echo $nextPostExistence ? '' : 'post-single__buttons-next--disabled' ?>">
                <a href="<?php echo $nextPostExistence ? get_permalink($nextPostId) : '#'; ?>" class="post-single__buttons-link"><span class="post-single__button-text-mobile">next</span><span class="post-single__button-text-pc">Go to next post</span>
                </a>
             </div>

@@ -137,7 +137,7 @@
          display: inline;
       }
    }
-   &__buttons--previous{
+   &__buttons-previous{
       &::before{
          content: '';
          background-image: url(../../assets/icons/left-arrow-blog.svg);
@@ -151,7 +151,7 @@
          height: 32px;
       }
    }
-   &__buttons--next{
+   &__buttons-next{
       &::after{
          content: '';
          background-image: url(../../assets/icons/right-arrow-blog.svg);
@@ -163,6 +163,24 @@
          margin-left: 10px;
          width: 32px;
          height: 32px;
+      }
+   }
+   &__buttons-previous--disabled{
+      user-select: none;
+      pointer-events: none;
+      color: #a7bad9;
+      text-decoration: none;
+      &::before{
+         background-image: url(../../assets/icons/left-arrow-blog-disabled.svg);
+      }
+   }
+   &__buttons-next--disabled{
+      user-select: none;
+      pointer-events: none;
+      color: #a7bad9;
+      text-decoration: none;
+      &::after{
+         background-image: url(../../assets/icons/right-arrow-blog-disabled.svg);
       }
    }
 }
