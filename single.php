@@ -1,6 +1,7 @@
 <?php
    get_header();
 //global variables
+
 $allPosts = new WP_Query(array(
    'post_type' => 'post',
 ));
@@ -8,6 +9,49 @@ $currentPostId = get_the_ID();
 $allPostsIds = [];
 $randomPostChoices = [];
 $choosenPostsIds = [];
+$prevPostExistence = True;
+$nextPostExistence = True;
+
+// getting post IDs to show in post proposal slider
+
+while($allPosts->have_posts()){
+   $allPosts->the_post();
+   array_push($allPostsIds, get_the_ID()); //filling an array with all post IDs
+   wp_reset_postdata();
+};
+$postsAvailable = count($allPostsIds); //counting all posts
+if($postsAvailable <= 4){
+   $postsToDisplay = count($allPostsIds) - 1; //setting maximum posts for display to maximum posts available
+} else{
+   $postsToDisplay = 4; //when number of posts are more than needed we display fixed number of posts
+}
+while(count($randomPostChoices)<$postsToDisplay){
+   $newChoice = rand(0,count($allPostsIds)-1);
+   if(!in_array($newChoice, $randomPostChoices) && $allPostsIds[$newChoice] != $currentPostId){
+      array_push($randomPostChoices, $newChoice);
+      array_push($choosenPostsIds, $allPostsIds[$newChoice]);
+   };
+};
+
+// setting next and prev post IDs
+
+for($i=0; $i<=count($allPostsIds)-1; $i++){
+   if($allPostsIds[$i] == $currentPostId){
+      $nextPostId = $allPostsIds[$i+1];
+      $prevPostId = $allPostsIds[$i-1];
+      break;
+   }
+}
+
+// setting triggers for cases when previous or next post don't exist
+
+if(!$prevPostId){
+   $prevPostExistence = False;
+};
+if(!$nextPostId){
+   $nextPostExistence = False;
+};
+                  
 ?>
 
 <main class="main">
@@ -33,26 +77,6 @@ $choosenPostsIds = [];
             <div class="post-single__highlights-container">
                <div class="post-single__highlights-content">
                   <h3 class="post-single__highlights-title">Read our other posts:</h3>
-                  <?php 
-                  while($allPosts->have_posts()){
-                     $allPosts->the_post();
-                     array_push($allPostsIds, get_the_ID()); //filling an array with all post IDs
-                     wp_reset_postdata();
-                  };
-                  $postsAvailable = count($allPostsIds); //counting all posts
-                  if($postsAvailable <= 4){
-                     $postsToDisplay = count($allPostsIds) - 1; //setting maximum posts for display to maximum posts available
-                  } else{
-                     $postsToDisplay = 4; //when number of posts are more than needed we display fixed number of posts
-                  }
-                  while(count($randomPostChoices)<$postsToDisplay){
-                     $newChoice = rand(0,count($allPostsIds)-1);
-                     if(!in_array($newChoice, $randomPostChoices) && $allPostsIds[$newChoice] != $currentPostId){
-                        array_push($randomPostChoices, $newChoice);
-                        array_push($choosenPostsIds, $allPostsIds[$newChoice]);
-                     };
-                  };
-                  ?>
                   <div class="post-highlight-slider">
                      <?php for($i = 0; $i<count($choosenPostsIds); $i++){
                         $postToDisplay = get_post($choosenPostsIds[$i]);
@@ -70,15 +94,14 @@ $choosenPostsIds = [];
             </div>         
          </div>
          <div class="post-single__buttons-container">
-            <div class="post-single__buttons post-single__buttons--previous"><span class="post-single__button-text-mobile">prev</span><span class="post-single__button-text-pc">Go to previous post</span></div>
-            <div class="post-single__buttons post-single__buttons--next"><span class="post-single__button-text-mobile">next</span><span class="post-single__button-text-pc">Go to next post</span></div>
+            <div class="post-single__buttons post-single__buttons--previous">
+               <a href="<?php echo $prevPostExistence ? get_permalink($prevPostId) : '#'; ?>" class="post-single__buttons-link"><span class="post-single__button-text-mobile">prev</span><span class="post-single__button-text-pc">Go to previous post</span></a>
+            </div>
+            <div class="post-single__buttons post-single__buttons--next">
+               <a href="<?php echo $nextPostExistence ? get_permalink($nextPostId) : '#'; ?>" class="post-single__buttons-link"><span class="post-single__button-text-mobile">next</span><span class="post-single__button-text-pc">Go to next post</span>
+               </a>
+            </div>
          </div>
-         <?php 
-         // foreach($allPostsIds as $item){
-               // echo $item.'<br>';
-            // }; 
-            // echo array_search(get_the_ID(), $allPostsIds);
-            ?>
       </div>
    </div>
 </main>
